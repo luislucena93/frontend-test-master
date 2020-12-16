@@ -8,6 +8,8 @@ import {
 import MainScreen from './pages/MainScreen';
 import WelcomeScreen from './pages/WelcomeScreen';
 import './styles/commonStyles.scss';
+import './styles/mainScreenStyles.scss';
+import './styles/welcomeScreenStyles.scss';
 
 // You don't have to use `fetch` btw, use whatever you want
 const getCounters = () =>

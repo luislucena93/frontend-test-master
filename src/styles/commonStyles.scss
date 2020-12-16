@@ -1,10 +1,30 @@
+body {
+  margin: 0px;
+}
+
+input:disabled::-webkit-input-placeholder { /* WebKit browsers */
+  color: #c4c4c4;
+}
+
+input:disabled:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #c4c4c4;
+}
+
+input:disabled::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #c4c4c4;
+}
+
+input:disabled:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #c4c4c4;
+}
 
 .container {
+  margin: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 32px);
   font-family: 'Avenir Next';
 }
 
