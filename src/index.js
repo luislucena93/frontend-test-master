@@ -5,35 +5,35 @@ import {
     Switch,
     Route
 } from "react-router-dom";
+import {Provider} from 'react-redux'
+import {createStore, applyMiddleware} from 'redux'
+import thunkMiddleware from "redux-thunk";
+import CountersApp from './reducers/index';
 import MainScreen from './pages/MainScreen';
 import WelcomeScreen from './pages/WelcomeScreen';
 import './styles/commonStyles.scss';
 import './styles/mainScreenStyles.scss';
 import './styles/welcomeScreenStyles.scss';
 
-// You don't have to use `fetch` btw, use whatever you want
-const getCounters = () =>
-    fetch('/api/v1/counter', {method: 'get'})
-        .then(res => res.json());
+
+let store = createStore(CountersApp, applyMiddleware(thunkMiddleware));
 
 const App = () => {
-    React.useEffect(() => {
-        getCounters().then(console.log, console.error);
-    }, []);
-
     return (
-        <Router>
-            <div>
-                <Switch>
-                    <Route path="/mainScreen">
-                        <MainScreen/>
-                    </Route>
-                    <Route path="/">
-                        <WelcomeScreen/>
-                    </Route>
-                </Switch>
-            </div>
-        </Router>
+        <Provider store={store}>
+            <Router>
+                <div>
+                    <Switch>
+                        <Route path="/mainScreen">
+                            <MainScreen/>
+                        </Route>
+                        <Route path="/">
+                            <WelcomeScreen/>
+                        </Route>
+                    </Switch>
+                </div>
+            </Router>
+        </Provider>
     );
 };
 

@@ -2,21 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b5a6a16-ccc2-4bbf-9f57-b298cb27b102" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/Plus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/Search-disabled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/Search.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Footer/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Footer/styles.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/SearchInputText/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/SearchInputText/styles.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/styles/mainScreenStyles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/Close.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/Delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/Minus-disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/Minus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/Plus-disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/Plus-orange.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/Share.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/AddCounterModal/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/AddCounterModal/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/CountersList/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/DeleteConfirmationModal/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/EmptyList/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/FullList/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/FullList/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/InputText/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/InputText/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Loading/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/NamesExamplesModal/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/NamesExamplesModal/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/OverlayModal/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/OverlayModal/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/SearchBar/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reducers/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/SearchInputText/index.js" afterPath="$PROJECT_DIR$/src/components/SearchBar/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/SearchInputText/styles.scss" afterPath="$PROJECT_DIR$/src/components/Loading/styles.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Footer/index.js" afterPath="$PROJECT_DIR$/src/components/Footer/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Footer/styles.scss" afterPath="$PROJECT_DIR$/src/components/Footer/styles.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/MainScreen.js" afterPath="$PROJECT_DIR$/src/pages/MainScreen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/WelcomeScreen.js" afterPath="$PROJECT_DIR$/src/pages/WelcomeScreen.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/commonStyles.scss" afterPath="$PROJECT_DIR$/src/styles/commonStyles.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/mainScreenStyles.scss" afterPath="$PROJECT_DIR$/src/styles/mainScreenStyles.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,114 +47,118 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="73" column="51" lean-forward="false" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MainScreen.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/MainScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="555">
+              <caret line="37" column="35" lean-forward="true" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#49#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/SearchInputText/index.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/CountersList/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/SearchInputText/styles.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WelcomeScreen.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/WelcomeScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="welcomeScreenStyles.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/welcomeScreenStyles.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainScreenStyles.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/mainScreenStyles.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commonStyles.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/commonStyles.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-222">
-              <caret line="21" column="15" lean-forward="true" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+            <state relative-caret-position="180">
+              <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Footer/index.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Loading/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="50" lean-forward="true" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+            <state relative-caret-position="90">
+              <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Loading/styles.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1364">
+              <caret line="101" column="25" lean-forward="true" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/FullList/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="52" lean-forward="true" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
               <folding>
-                <element signature="e#0#38#0" expanded="true" />
-                <marker date="1608093285351" expanded="true" signature="258:392" ph="..." />
-                <marker date="1608093285351" expanded="true" signature="310:373" ph="..." />
+                <marker date="1608175222096" expanded="true" signature="2877:4275" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Footer/styles.scss">
+        <entry file="file://$PROJECT_DIR$/src/components/NamesExamplesModal/styles.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+            <state relative-caret-position="570">
+              <caret line="38" column="15" lean-forward="false" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Logo.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/images/Logo.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/AddCounterModal/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="511">
+              <caret line="38" column="67" lean-forward="false" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/AddCounterModal/styles.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>addCounter</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -149,21 +173,41 @@
       <list>
         <option value="$USER_HOME$/.ssh/id_rsa.pub" />
         <option value="$PROJECT_DIR$/src/styles/commonStyles.css" />
-        <option value="$PROJECT_DIR$/src/styles/welcomeScreenStyles.scss" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/pages/WelcomeScreen.js" />
         <option value="$PROJECT_DIR$/src/Components/InputText.js" />
         <option value="$PROJECT_DIR$/src/components/InputText.js" />
         <option value="$PROJECT_DIR$/src/components/InputText/InputText.js" />
-        <option value="$PROJECT_DIR$/src/components/InputText/index.js" />
-        <option value="$PROJECT_DIR$/src/components/InputText/styles.scss" />
-        <option value="$PROJECT_DIR$/src/styles/commonStyles.scss" />
         <option value="$PROJECT_DIR$/src/components/SearchInputText/styles.scss" />
+        <option value="$PROJECT_DIR$/src/styles/welcomeScreenStyles.scss" />
+        <option value="$PROJECT_DIR$/src/components/Loading/index.js" />
         <option value="$PROJECT_DIR$/src/components/SearchInputText/index.js" />
+        <option value="$PROJECT_DIR$/src/Actions/actions.js" />
+        <option value="$PROJECT_DIR$/src/Reducers/reducers.js" />
+        <option value="$PROJECT_DIR$/src/store/index.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/components/EmptyList/index.js" />
+        <option value="$PROJECT_DIR$/src/components/SearchBar/index.js" />
         <option value="$PROJECT_DIR$/src/styles/mainScreenStyles.scss" />
-        <option value="$PROJECT_DIR$/src/components/Footer/index.js" />
+        <option value="$PROJECT_DIR$/src/styles/commonStyles.scss" />
+        <option value="$PROJECT_DIR$/src/components/InputText/styles.scss" />
         <option value="$PROJECT_DIR$/src/components/Footer/styles.scss" />
+        <option value="$PROJECT_DIR$/src/components/FullList/styles.scss" />
+        <option value="$PROJECT_DIR$/src/components/Footer/index.js" />
+        <option value="$PROJECT_DIR$/src/components/OverlayModal/index.js" />
+        <option value="$PROJECT_DIR$/src/components/DeleteConfirmationModal/index.js" />
+        <option value="$PROJECT_DIR$/src/components/FullList/index.js" />
+        <option value="$PROJECT_DIR$/src/components/NamesExamplesModal/styles.scss" />
+        <option value="$PROJECT_DIR$/src/reducers/index.js" />
+        <option value="$PROJECT_DIR$/src/components/InputText/index.js" />
+        <option value="$PROJECT_DIR$/src/components/OverlayModal/styles.scss" />
+        <option value="$PROJECT_DIR$/src/components/NamesExamplesModal/index.js" />
+        <option value="$PROJECT_DIR$/src/actions/index.js" />
+        <option value="$PROJECT_DIR$/src/components/CountersList/index.js" />
         <option value="$PROJECT_DIR$/src/pages/MainScreen.js" />
+        <option value="$PROJECT_DIR$/src/components/Loading/styles.scss" />
+        <option value="$PROJECT_DIR$/src/components/AddCounterModal/index.js" />
+        <option value="$PROJECT_DIR$/src/components/AddCounterModal/styles.scss" />
       </list>
     </option>
   </component>
@@ -179,7 +223,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="976" />
+    <option name="height" value="973" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -216,6 +260,12 @@
               <item name="frontend-test-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="frontend-test-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontend-test-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend-test-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -223,20 +273,42 @@
               <item name="frontend-test-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Footer" type="462c0819:PsiDirectoryNode" />
+              <item name="AddCounterModal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="frontend-test-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="frontend-test-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="SearchInputText" type="462c0819:PsiDirectoryNode" />
+              <item name="CountersList" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="frontend-test-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="frontend-test-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="FullList" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontend-test-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend-test-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Loading" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontend-test-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend-test-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="NamesExamplesModal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontend-test-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend-test-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="OverlayModal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="frontend-test-master" type="b2602c69:ProjectViewProjectNode" />
@@ -248,7 +320,7 @@
               <item name="frontend-test-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="frontend-test-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -264,6 +336,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/components/Loading" />
       <recent name="$PROJECT_DIR$/src/styles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -376,29 +450,39 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608059288139</updated>
-      <workItem from="1608059291273" duration="22300000" />
+      <workItem from="1608059291273" duration="69323000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22300000" />
+    <option name="totallyTimeSpent" value="69323000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="976" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="973" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33099416" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24969475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -408,9 +492,33 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33099416" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24969475" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -492,41 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1714">
-            <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-            <folding>
-              <marker date="1603818238000" expanded="true" signature="3257:3271" ph="/*...*/" />
-              <marker date="1603818238000" expanded="true" signature="3347:3357" ph="/*...*/" />
-              <marker date="1603818238000" expanded="true" signature="3376:3390" ph="/*...*/" />
-              <marker date="1603818238000" expanded="true" signature="3522:3532" ph="/*...*/" />
-              <marker date="1603818238000" expanded="true" signature="3549:3563" ph="/*...*/" />
-              <marker date="1603818238000" expanded="true" signature="3696:3706" ph="/*...*/" />
-              <marker date="1603818238000" expanded="true" signature="3723:3737" ph="/*...*/" />
-              <marker date="1603818238000" expanded="true" signature="3852:3862" ph="/*...*/" />
-              <marker date="1603818238000" expanded="true" signature="3879:3893" ph="/*...*/" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1608073412368" expanded="true" signature="0:873" ph="{&quot;name&quot;: &quot;cornershop-frontend-test&quot;...}" />
-            <marker date="1608073412368" expanded="true" signature="298:606" ph="{&quot;body-parser&quot;: &quot;^1.16.1&quot;...}" />
-            <marker date="1608073412368" expanded="true" signature="662:871" ph="{...}" />
-            <marker date="1608073412368" expanded="true" signature="682:746" ph="[...]" />
-            <marker date="1608073412368" expanded="true" signature="767:867" ph="[...]" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/images/Icon.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -550,16 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/images/Search.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -575,22 +638,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/commonStyles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-222">
-          <caret line="21" column="15" lean-forward="true" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/mainScreenStyles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/welcomeScreenStyles.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -599,7 +646,406 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SearchInputText/styles.scss">
+    <entry file="file://$PROJECT_DIR$/src/pages/WelcomeScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="37" lean-forward="false" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1608157361834" expanded="true" signature="0:588083" ph="{&quot;name&quot;: &quot;cornershop-frontend-test&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="124:588081" ph="{...}" />
+            <marker date="1608157361834" expanded="true" signature="522979:522985" ph="{&quot;version&quot;: &quot;1.3.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="523006:523240" ph="{&quot;version&quot;: &quot;3.2.4&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="523255:523627" ph="{&quot;version&quot;: &quot;5.4.6&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="523491:523621" ph="{&quot;ajv&quot;: &quot;^6.10.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="523644:523870" ph="{&quot;version&quot;: &quot;1.1.3&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="523883:524213" ph="{&quot;version&quot;: &quot;2.2.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="524115:524207" ph="{&quot;block-stream&quot;: &quot;*&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="524229:524890" ph="{&quot;version&quot;: &quot;4.8.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="524467:524580" ph="{&quot;commander&quot;: &quot;^2.20.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="524604:524884" ph="{...}" />
+            <marker date="1608157361834" expanded="true" signature="524628:524876" ph="{&quot;version&quot;: &quot;0.6.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="524921:529497" ph="{&quot;version&quot;: &quot;2.3.8&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="525189:525500" ph="{&quot;cacache&quot;: &quot;^13.0.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="525524:529491" ph="{...}" />
+            <marker date="1608157361834" expanded="true" signature="525552:525946" ph="{&quot;version&quot;: &quot;3.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="525822:525936" ph="{&quot;commondir&quot;: &quot;^1.0.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="525967:526319" ph="{&quot;version&quot;: &quot;4.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="526223:526309" ph="{&quot;locate-path&quot;: &quot;^5.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="526341:526585" ph="{&quot;version&quot;: &quot;4.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="526610:526976" ph="{&quot;version&quot;: &quot;25.5.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="526876:526966" ph="{&quot;merge-stream&quot;: &quot;^2.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="527001:527321" ph="{&quot;version&quot;: &quot;5.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="527265:527311" ph="{&quot;p-locate&quot;: &quot;^4.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="527343:527655" ph="{&quot;version&quot;: &quot;3.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="527601:527645" ph="{&quot;semver&quot;: &quot;^6.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="527677:527990" ph="{&quot;version&quot;: &quot;4.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="527935:527980" ph="{&quot;p-limit&quot;: &quot;^2.2.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="528015:528265" ph="{&quot;version&quot;: &quot;4.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="528286:528597" ph="{&quot;version&quot;: &quot;4.2.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="528542:528587" ph="{&quot;find-up&quot;: &quot;^4.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="528617:528857" ph="{&quot;version&quot;: &quot;6.3.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="528881:529129" ph="{&quot;version&quot;: &quot;0.6.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="529157:529483" ph="{&quot;version&quot;: &quot;7.2.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="529427:529473" ph="{&quot;has-flag&quot;: &quot;^4.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="529519:529916" ph="{&quot;version&quot;: &quot;5.2.3&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="529769:529910" ph="{&quot;glob&quot;: &quot;^7.1.3&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="529936:530106" ph="{&quot;version&quot;: &quot;0.2.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="530122:530284" ph="{&quot;version&quot;: &quot;4.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="530301:530465" ph="{&quot;version&quot;: &quot;2.3.8&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="530483:531783" ph="{&quot;version&quot;: &quot;2.0.5&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="530725:530797" ph="{&quot;readable-stream&quot;: &quot;~2.3.6&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="530821:531777" ph="{...}" />
+            <marker date="1608157361834" expanded="true" signature="530850:531412" ph="{&quot;version&quot;: &quot;2.3.7&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="531122:531402" ph="{&quot;core-util-is&quot;: &quot;~1.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="531440:531769" ph="{&quot;version&quot;: &quot;1.1.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="531710:531759" ph="{&quot;safe-buffer&quot;: &quot;~5.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="531799:532023" ph="{&quot;version&quot;: &quot;1.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="532050:532360" ph="{&quot;version&quot;: &quot;2.0.12&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="532312:532354" ph="{&quot;setimmediate&quot;: &quot;^1.0.4&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="532377:532541" ph="{&quot;version&quot;: &quot;0.3.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="532565:532805" ph="{&quot;version&quot;: &quot;1.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="532827:533063" ph="{&quot;version&quot;: &quot;1.0.3&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="533076:533355" ph="{&quot;version&quot;: &quot;0.0.33&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="533310:533349" ph="{&quot;os-tmpdir&quot;: &quot;~1.0.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="533369:533527" ph="{&quot;version&quot;: &quot;1.0.4&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="533551:533729" ph="{&quot;version&quot;: &quot;1.0.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="533757:533943" ph="{&quot;version&quot;: &quot;2.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="533967:534202" ph="{&quot;version&quot;: &quot;0.3.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="534159:534196" ph="{&quot;kind-of&quot;: &quot;^3.0.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="534220:534612" ph="{&quot;version&quot;: &quot;3.0.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="534462:534606" ph="{&quot;define-property&quot;: &quot;^2.0.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="534636:534908" ph="{&quot;version&quot;: &quot;2.1.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="534828:534902" ph="{&quot;is-number&quot;: &quot;^3.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="534930:535166" ph="{&quot;version&quot;: &quot;1.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="535188:535508" ph="{&quot;version&quot;: &quot;2.5.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="535438:535502" ph="{&quot;psl&quot;: &quot;^1.1.28&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="535522:535738" ph="{&quot;version&quot;: &quot;1.0.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="535694:535732" ph="{&quot;punycode&quot;: &quot;^2.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="535757:535987" ph="{&quot;version&quot;: &quot;1.2.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="536010:536186" ph="{&quot;version&quot;: &quot;1.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="536210:536504" ph="{&quot;version&quot;: &quot;1.0.3&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="536464:536498" ph="{&quot;glob&quot;: &quot;^7.1.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="536520:536744" ph="{&quot;version&quot;: &quot;1.1.6&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="536759:536983" ph="{&quot;version&quot;: &quot;1.14.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="537000:537283" ph="{&quot;version&quot;: &quot;3.17.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="537242:537277" ph="{&quot;tslib&quot;: &quot;^1.8.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="537307:537485" ph="{&quot;version&quot;: &quot;0.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="537507:537742" ph="{&quot;version&quot;: &quot;0.6.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="537695:537736" ph="{&quot;safe-buffer&quot;: &quot;^5.0.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="537761:537931" ph="{&quot;version&quot;: &quot;0.14.5&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="537945:538165" ph="{&quot;version&quot;: &quot;1.2.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="538185:538415" ph="{&quot;version&quot;: &quot;0.3.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="538369:538409" ph="{&quot;prelude-ls&quot;: &quot;~1.1.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="538434:538664" ph="{&quot;version&quot;: &quot;0.8.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="538681:539002" ph="{&quot;version&quot;: &quot;1.6.18&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="538923:538996" ph="{&quot;media-typer&quot;: &quot;0.3.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="539022:539192" ph="{&quot;version&quot;: &quot;0.0.6&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="539245:539543" ph="{&quot;version&quot;: &quot;1.0.4&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="539586:540014" ph="{&quot;version&quot;: &quot;1.0.4&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="539878:540008" ph="{&quot;unicode-canonical-property-names-ecmascript&quot;: &quot;^1.0.4&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="540063:540353" ph="{&quot;version&quot;: &quot;1.2.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="540398:540680" ph="{&quot;version&quot;: &quot;1.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="540701:541091" ph="{&quot;version&quot;: &quot;1.0.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="540949:541085" ph="{&quot;arr-union&quot;: &quot;^3.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="541105:541263" ph="{&quot;version&quot;: &quot;1.0.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="541278:541438" ph="{&quot;version&quot;: &quot;2.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="541463:541766" ph="{&quot;version&quot;: &quot;1.1.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="541719:541760" ph="{&quot;unique-slug&quot;: &quot;^2.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="541787:542082" ph="{&quot;version&quot;: &quot;2.0.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="542035:542076" ph="{&quot;imurmurhash&quot;: &quot;^0.1.4&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="542104:542340" ph="{&quot;version&quot;: &quot;0.1.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="542356:542518" ph="{&quot;version&quot;: &quot;1.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="542535:542699" ph="{&quot;version&quot;: &quot;1.1.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="542720:543915" ph="{&quot;version&quot;: &quot;1.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="542906:542975" ph="{&quot;has-value&quot;: &quot;^0.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="542999:543909" ph="{...}" />
+            <marker date="1608157361834" expanded="true" signature="543022:543691" ph="{&quot;version&quot;: &quot;0.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="543220:543337" ph="{&quot;get-value&quot;: &quot;^2.0.3&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="543365:543681" ph="{...}" />
+            <marker date="1608157361834" expanded="true" signature="543391:543669" ph="{&quot;version&quot;: &quot;2.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="543603:543655" ph="{&quot;isarray&quot;: &quot;1.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="543715:543901" ph="{&quot;version&quot;: &quot;0.1.4&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="543930:544152" ph="{&quot;version&quot;: &quot;1.2.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="544168:544450" ph="{&quot;version&quot;: &quot;4.4.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="544406:544444" ph="{&quot;punycode&quot;: &quot;^2.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="544464:544622" ph="{&quot;version&quot;: &quot;0.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="544635:545118" ph="{&quot;version&quot;: &quot;0.11.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="544807:544876" ph="{&quot;punycode&quot;: &quot;1.3.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="544900:545112" ph="{...}" />
+            <marker date="1608157361834" expanded="true" signature="544922:545104" ph="{&quot;version&quot;: &quot;1.3.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="545138:545778" ph="{&quot;version&quot;: &quot;2.3.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="545384:545486" ph="{&quot;loader-utils&quot;: &quot;^1.2.3&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="545510:545772" ph="{...}" />
+            <marker date="1608157361834" expanded="true" signature="545528:545764" ph="{&quot;version&quot;: &quot;2.4.6&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="545797:546126" ph="{&quot;version&quot;: &quot;1.4.7&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="546041:546120" ph="{&quot;querystringify&quot;: &quot;^2.1.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="546139:546357" ph="{&quot;version&quot;: &quot;3.1.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="546371:546650" ph="{&quot;version&quot;: &quot;0.11.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="546607:546644" ph="{&quot;inherits&quot;: &quot;2.0.3&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="546674:546852" ph="{&quot;version&quot;: &quot;1.0.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="546876:548084" ph="{&quot;version&quot;: &quot;1.0.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="547130:547298" ph="{&quot;define-properties&quot;: &quot;^1.1.3&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="547322:548078" ph="{...}" />
+            <marker date="1608157361834" expanded="true" signature="547347:548070" ph="{&quot;version&quot;: &quot;1.17.7&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="547613:548060" ph="{&quot;es-to-primitive&quot;: &quot;^1.2.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="548099:548259" ph="{&quot;version&quot;: &quot;0.4.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="548280:548452" ph="{&quot;version&quot;: &quot;1.0.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="548466:548686" ph="{&quot;version&quot;: &quot;3.4.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="548712:548956" ph="{&quot;version&quot;: &quot;2.2.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="548994:549367" ph="{&quot;version&quot;: &quot;3.0.4&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="549276:549361" ph="{&quot;spdx-correct&quot;: &quot;^3.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="549388:549622" ph="{&quot;version&quot;: &quot;1.0.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="549636:549794" ph="{&quot;version&quot;: &quot;1.1.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="549811:550037" ph="{&quot;version&quot;: &quot;1.0.4&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="550053:550343" ph="{&quot;version&quot;: &quot;1.10.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="550231:550337" ph="{&quot;assert-plus&quot;: &quot;^1.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="550366:550604" ph="{&quot;version&quot;: &quot;1.1.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="550625:550931" ph="{&quot;version&quot;: &quot;1.0.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="550873:550925" ph="{&quot;browser-process-hrtime&quot;: &quot;^1.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="550958:551346" ph="{&quot;version&quot;: &quot;1.1.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="551218:551340" ph="{&quot;domexception&quot;: &quot;^1.0.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="551362:551582" ph="{&quot;version&quot;: &quot;1.0.7&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="551538:551576" ph="{&quot;makeerror&quot;: &quot;1.0.x&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="551601:551994" ph="{&quot;version&quot;: &quot;1.7.5&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="551845:551988" ph="{&quot;chokidar&quot;: &quot;^3.4.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="552023:556679" ph="{&quot;version&quot;: &quot;2.0.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="552311:552349" ph="{&quot;chokidar&quot;: &quot;^2.1.8&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="552373:556673" ph="{...}" />
+            <marker date="1608157361834" expanded="true" signature="552404:552696" ph="{&quot;version&quot;: &quot;1.13.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="552718:553453" ph="{&quot;version&quot;: &quot;2.1.8&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="553004:553443" ph="{&quot;anymatch&quot;: &quot;^2.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="553475:553849" ph="{&quot;version&quot;: &quot;1.2.13&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="553763:553839" ph="{&quot;bindings&quot;: &quot;^1.5.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="553874:554574" ph="{&quot;version&quot;: &quot;3.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="554104:554187" ph="{&quot;is-glob&quot;: &quot;^3.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="554215:554564" ph="{...}" />
+            <marker date="1608157361834" expanded="true" signature="554240:554552" ph="{&quot;version&quot;: &quot;3.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="554482:554538" ph="{&quot;is-extglob&quot;: &quot;^2.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="554602:554903" ph="{&quot;version&quot;: &quot;1.0.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="554838:554893" ph="{&quot;binary-extensions&quot;: &quot;^1.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="554931:555215" ph="{&quot;version&quot;: &quot;3.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="555244:555834" ph="{&quot;version&quot;: &quot;2.3.7&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="555544:555824" ph="{&quot;core-util-is&quot;: &quot;~1.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="555856:556280" ph="{&quot;version&quot;: &quot;2.2.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="556142:556270" ph="{&quot;graceful-fs&quot;: &quot;^4.1.11&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="556308:556665" ph="{&quot;version&quot;: &quot;1.1.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="556606:556655" ph="{&quot;safe-buffer&quot;: &quot;~5.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="556693:556982" ph="{&quot;version&quot;: &quot;1.7.3&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="556927:556976" ph="{&quot;minimalistic-assert&quot;: &quot;^1.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="557010:557258" ph="{&quot;version&quot;: &quot;4.0.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="557275:562172" ph="{&quot;version&quot;: &quot;4.42.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="557517:558363" ph="{&quot;@webassemblyjs/ast&quot;: &quot;1.8.5&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="558387:562166" ph="{...}" />
+            <marker date="1608157361834" expanded="true" signature="558406:558644" ph="{&quot;version&quot;: &quot;6.4.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="558665:559477" ph="{&quot;version&quot;: &quot;12.0.4&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="558923:559467" ph="{&quot;bluebird&quot;: &quot;^3.5.5&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="559503:559862" ph="{&quot;version&quot;: &quot;4.0.3&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="559769:559852" ph="{&quot;esrecurse&quot;: &quot;^4.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="559885:560200" ph="{&quot;version&quot;: &quot;5.1.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="560145:560190" ph="{&quot;yallist&quot;: &quot;^3.0.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="560226:560617" ph="{&quot;version&quot;: &quot;1.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="560492:560607" ph="{&quot;ajv&quot;: &quot;^6.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="560641:560889" ph="{&quot;version&quot;: &quot;0.6.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="560907:561218" ph="{&quot;version&quot;: &quot;6.0.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="561157:561208" ph="{&quot;figgy-pudding&quot;: &quot;^3.5.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="561253:561895" ph="{&quot;version&quot;: &quot;1.4.5&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="561537:561885" ph="{&quot;cacache&quot;: &quot;^12.0.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="561916:562158" ph="{&quot;version&quot;: &quot;3.1.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="562204:562926" ph="{&quot;version&quot;: &quot;3.7.3&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="562474:562634" ph="{&quot;memory-fs&quot;: &quot;^0.4.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="562658:562920" ph="{...}" />
+            <marker date="1608157361834" expanded="true" signature="562676:562912" ph="{&quot;version&quot;: &quot;2.4.6&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="562954:570693" ph="{&quot;version&quot;: &quot;3.11.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="563218:564272" ph="{&quot;ansi-html&quot;: &quot;0.0.7&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="564296:570687" ph="{...}" />
+            <marker date="1608157361834" expanded="true" signature="564320:564506" ph="{&quot;version&quot;: &quot;2.1.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="564537:564801" ph="{&quot;version&quot;: &quot;1.13.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="564823:565530" ph="{&quot;version&quot;: &quot;2.1.8&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="565081:565520" ph="{&quot;anymatch&quot;: &quot;^2.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="565549:565850" ph="{&quot;version&quot;: &quot;4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="565801:565840" ph="{&quot;ms&quot;: &quot;2.1.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="565872:566246" ph="{&quot;version&quot;: &quot;1.2.13&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="566160:566236" ph="{&quot;bindings&quot;: &quot;^1.5.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="566271:566911" ph="{&quot;version&quot;: &quot;3.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="566473:566556" ph="{&quot;is-glob&quot;: &quot;^3.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="566584:566901" ph="{...}" />
+            <marker date="1608157361834" expanded="true" signature="566609:566889" ph="{&quot;version&quot;: &quot;3.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="566819:566875" ph="{&quot;is-extglob&quot;: &quot;^2.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="566940:567198" ph="{&quot;version&quot;: &quot;3.0.3&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="567226:567499" ph="{&quot;version&quot;: &quot;1.0.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="567434:567489" ph="{&quot;binary-extensions&quot;: &quot;^1.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="567515:567747" ph="{&quot;version&quot;: &quot;2.1.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="567775:568031" ph="{&quot;version&quot;: &quot;3.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="568060:568622" ph="{&quot;version&quot;: &quot;2.3.7&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="568332:568612" ph="{&quot;core-util-is&quot;: &quot;~1.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="568644:569040" ph="{&quot;version&quot;: &quot;2.2.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="568902:569030" ph="{&quot;graceful-fs&quot;: &quot;^4.1.11&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="569066:569457" ph="{&quot;version&quot;: &quot;1.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="569332:569447" ph="{&quot;ajv&quot;: &quot;^6.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="569477:569717" ph="{&quot;version&quot;: &quot;6.3.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="569745:570074" ph="{&quot;version&quot;: &quot;1.1.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="570015:570064" ph="{&quot;safe-buffer&quot;: &quot;~5.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="570098:570356" ph="{&quot;version&quot;: &quot;3.0.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="570298:570346" ph="{&quot;ansi-regex&quot;: &quot;^2.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="570372:570679" ph="{&quot;version&quot;: &quot;6.2.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="570618:570669" ph="{&quot;async-limiter&quot;: &quot;~1.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="570714:571035" ph="{&quot;version&quot;: &quot;2.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="570962:571029" ph="{&quot;ansi-colors&quot;: &quot;^3.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="571068:571922" ph="{&quot;version&quot;: &quot;2.2.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="571340:571473" ph="{&quot;fs-extra&quot;: &quot;^7.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="571497:571916" ph="{...}" />
+            <marker date="1608157361834" expanded="true" signature="571519:571908" ph="{&quot;version&quot;: &quot;7.0.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="571777:571898" ph="{&quot;graceful-fs&quot;: &quot;^4.1.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="571947:572590" ph="{&quot;version&quot;: &quot;1.4.3&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="572203:572280" ph="{&quot;source-list-map&quot;: &quot;^2.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="572304:572584" ph="{...}" />
+            <marker date="1608157361834" expanded="true" signature="572328:572576" ph="{&quot;version&quot;: &quot;0.6.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="572616:572869" ph="{&quot;version&quot;: &quot;0.6.5&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="572812:572863" ph="{&quot;websocket-extensions&quot;: &quot;&gt;=0.1.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="572899:573151" ph="{&quot;version&quot;: &quot;0.1.4&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="573176:573478" ph="{&quot;version&quot;: &quot;1.0.5&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="573432:573472" ph="{&quot;iconv-lite&quot;: &quot;0.4.24&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="573500:573736" ph="{&quot;version&quot;: &quot;3.5.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="573761:574003" ph="{&quot;version&quot;: &quot;2.3.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="574023:574384" ph="{&quot;version&quot;: &quot;6.5.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="574269:574378" ph="{&quot;lodash.sortby&quot;: &quot;^4.7.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="574399:574676" ph="{&quot;version&quot;: &quot;1.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="574635:574670" ph="{&quot;isexe&quot;: &quot;^2.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="574698:574872" ph="{&quot;version&quot;: &quot;2.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="574892:576114" ph="{&quot;version&quot;: &quot;1.1.3&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="575138:575185" ph="{&quot;string-width&quot;: &quot;^1.0.2 || 2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="575209:576108" ph="{...}" />
+            <marker date="1608157361834" expanded="true" signature="575233:575419" ph="{&quot;version&quot;: &quot;3.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="575445:575818" ph="{&quot;version&quot;: &quot;2.1.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="575711:575808" ph="{&quot;is-fullwidth-code-point&quot;: &quot;^2.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="575842:576100" ph="{&quot;version&quot;: &quot;4.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="576042:576090" ph="{&quot;ansi-regex&quot;: &quot;^3.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="576133:576363" ph="{&quot;version&quot;: &quot;1.2.3&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="576396:576716" ph="{&quot;version&quot;: &quot;4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="576668:576710" ph="{&quot;workbox-core&quot;: &quot;^4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="576750:577072" ph="{&quot;version&quot;: &quot;4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="577024:577066" ph="{&quot;workbox-core&quot;: &quot;^4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="577095:578679" ph="{&quot;version&quot;: &quot;4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="577347:578230" ph="{&quot;@babel/runtime&quot;: &quot;^7.3.4&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="578254:578673" ph="{...}" />
+            <marker date="1608157361834" expanded="true" signature="578276:578665" ph="{&quot;version&quot;: &quot;4.0.3&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="578534:578655" ph="{&quot;graceful-fs&quot;: &quot;^4.1.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="578715:579041" ph="{&quot;version&quot;: &quot;4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="578993:579035" ph="{&quot;workbox-core&quot;: &quot;^4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="579063:579299" ph="{&quot;version&quot;: &quot;4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="579327:579637" ph="{&quot;version&quot;: &quot;4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="579589:579631" ph="{&quot;workbox-core&quot;: &quot;^4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="579671:580115" ph="{&quot;version&quot;: &quot;4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="579945:580109" ph="{&quot;workbox-background-sync&quot;: &quot;^4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="580151:580477" ph="{&quot;version&quot;: &quot;4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="580429:580471" ph="{&quot;workbox-core&quot;: &quot;^4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="580505:580815" ph="{&quot;version&quot;: &quot;4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="580767:580809" ph="{&quot;workbox-core&quot;: &quot;^4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="580847:581165" ph="{&quot;version&quot;: &quot;4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="581117:581159" ph="{&quot;workbox-core&quot;: &quot;^4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="581190:581494" ph="{&quot;version&quot;: &quot;4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="581446:581488" ph="{&quot;workbox-core&quot;: &quot;^4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="581522:581832" ph="{&quot;version&quot;: &quot;4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="581784:581826" ph="{&quot;workbox-core&quot;: &quot;^4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="581857:582161" ph="{&quot;version&quot;: &quot;4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="582113:582155" ph="{&quot;workbox-core&quot;: &quot;^4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="582181:582413" ph="{&quot;version&quot;: &quot;4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="582445:582843" ph="{&quot;version&quot;: &quot;4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="582715:582837" ph="{&quot;@babel/runtime&quot;: &quot;^7.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="582867:583169" ph="{&quot;version&quot;: &quot;4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="583121:583163" ph="{&quot;workbox-core&quot;: &quot;^4.3.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="583190:583479" ph="{&quot;version&quot;: &quot;1.7.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="583438:583473" ph="{&quot;errno&quot;: &quot;~0.1.7&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="583499:583794" ph="{&quot;version&quot;: &quot;0.1.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="583745:583788" ph="{&quot;microevent.ts&quot;: &quot;~0.1.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="583813:584170" ph="{&quot;version&quot;: &quot;5.1.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="584057:584164" ph="{&quot;ansi-styles&quot;: &quot;^3.2.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="584186:584348" ph="{&quot;version&quot;: &quot;1.0.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="584363:584641" ph="{&quot;version&quot;: &quot;1.0.3&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="584599:584635" ph="{&quot;mkdirp&quot;: &quot;^0.5.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="584668:585042" ph="{&quot;version&quot;: &quot;2.4.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="584928:585036" ph="{&quot;graceful-fs&quot;: &quot;^4.1.11&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="585054:585333" ph="{&quot;version&quot;: &quot;5.2.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="585284:585327" ph="{&quot;async-limiter&quot;: &quot;~1.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="585361:585609" ph="{&quot;version&quot;: &quot;3.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="585627:585855" ph="{&quot;version&quot;: &quot;2.2.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="585872:586171" ph="{&quot;version&quot;: &quot;4.4.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="586112:586165" ph="{&quot;@babel/runtime-corejs3&quot;: &quot;^7.12.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="586186:586408" ph="{&quot;version&quot;: &quot;4.0.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="586422:586642" ph="{&quot;version&quot;: &quot;4.0.1&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="586659:586885" ph="{&quot;version&quot;: &quot;4.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="586899:587121" ph="{&quot;version&quot;: &quot;1.10.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="587136:587726" ph="{&quot;version&quot;: &quot;13.3.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="587374:587720" ph="{&quot;cliui&quot;: &quot;^5.0.0&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="587748:588077" ph="{&quot;version&quot;: &quot;13.1.2&quot;...}" />
+            <marker date="1608157361834" expanded="true" signature="588000:588071" ph="{&quot;camelcase&quot;: &quot;^5.0.0&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="19" lean-forward="false" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/EmptyList/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/commonStyles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="72" column="66" lean-forward="false" selection-start-line="72" selection-start-column="66" selection-end-line="72" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SearchBar/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="37" column="116" lean-forward="false" selection-start-line="37" selection-start-column="76" selection-end-line="37" selection-end-column="116" />
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SearchBar/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="8" />
@@ -607,53 +1053,198 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/WelcomeScreen.js">
+    <entry file="file://$PROJECT_DIR$/src/components/InputText/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Footer/index.js">
+    <entry file="file://$PROJECT_DIR$/src/styles/mainScreenStyles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="50" lean-forward="true" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <marker date="1608093285351" expanded="true" signature="258:392" ph="..." />
-            <marker date="1608093285351" expanded="true" signature="310:373" ph="..." />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Footer/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        <state relative-caret-position="471">
+          <caret line="45" column="19" lean-forward="false" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/FullList/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="78" column="16" lean-forward="true" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Footer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+            <marker date="1608174103371" expanded="true" signature="1016:1208" ph="..." />
+            <marker date="1608174103371" expanded="true" signature="1122:1189" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="534">
+            <caret line="109" column="14" lean-forward="false" selection-start-line="109" selection-start-column="14" selection-end-line="109" selection-end-column="14" />
+            <folding>
+              <marker date="1603818238000" expanded="true" signature="3257:3271" ph="/*...*/" />
+              <marker date="1603818238000" expanded="true" signature="3347:3357" ph="/*...*/" />
+              <marker date="1603818238000" expanded="true" signature="3376:3390" ph="/*...*/" />
+              <marker date="1603818238000" expanded="true" signature="3522:3532" ph="/*...*/" />
+              <marker date="1603818238000" expanded="true" signature="3549:3563" ph="/*...*/" />
+              <marker date="1603818238000" expanded="true" signature="3696:3706" ph="/*...*/" />
+              <marker date="1603818238000" expanded="true" signature="3723:3737" ph="/*...*/" />
+              <marker date="1603818238000" expanded="true" signature="3852:3862" ph="/*...*/" />
+              <marker date="1603818238000" expanded="true" signature="3879:3893" ph="/*...*/" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DeleteConfirmationModal/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="38" lean-forward="false" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/InputText/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/OverlayModal/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/OverlayModal/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/NamesExamplesModal/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="40" column="49" lean-forward="true" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1364">
+          <caret line="101" column="25" lean-forward="true" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/FullList/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="52" lean-forward="true" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+          <folding>
+            <marker date="1608175222096" expanded="true" signature="2877:4275" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="73" column="51" lean-forward="false" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/CountersList/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/MainScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="555">
+          <caret line="37" column="35" lean-forward="true" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SearchInputText/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Loading/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        <state relative-caret-position="90">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Loading/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/NamesExamplesModal/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="15" lean-forward="false" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AddCounterModal/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="38" column="67" lean-forward="false" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AddCounterModal/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

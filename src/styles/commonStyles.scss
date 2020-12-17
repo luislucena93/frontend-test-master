@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  background-color: #FAFAFA;
 }
 
 input:disabled::-webkit-input-placeholder { /* WebKit browsers */
@@ -62,4 +63,12 @@ input:disabled:-ms-input-placeholder { /* Internet Explorer 10+ */
       font-style: normal;
     }
   }
+}
+
+.react-modal-sheet-backdrop {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.react-modal-sheet-container {
+  height: calc(100% - env(safe-area-inset-top) - 15px) !important;
 }
