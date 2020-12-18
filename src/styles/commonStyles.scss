@@ -61,10 +61,13 @@ button {
   &:focus {
     outline: none;
   }
+  &:active {
+    box-shadow: none;
+  }
 }
 
 .mainButton {
-  background: #FF9500;
+  background-color: #FF9500;
   color: white;
   &:focus {
     outline: none;
@@ -72,10 +75,13 @@ button {
   &:disabled {
     opacity: 0.5;
   }
+  &:active {
+    background-color: #ed8b00;
+  }
 }
 
 .secondaryButton {
-  background: white;
+  background-color: white;
   color: #FF9500;
   &.deleteButton {
     color: #FF3B30;

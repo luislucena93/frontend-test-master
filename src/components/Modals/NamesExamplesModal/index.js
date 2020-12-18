@@ -19,40 +19,53 @@ const NamesExamplesModal = () => {
         dispatch(setOpenNamesExamplesModal(false));
     }
 
+    const header = () => {
+        return (
+            <div className={"modalHeader"}>
+                <img src={CloseIcon} onClick={() => dispatch(setOpenNamesExamplesModal(false))} alt={""}/>
+                <h1>Examples</h1>
+            </div>
+        );
+    }
+
+    const namesCategoryScroller = (category) => {
+        return (
+            <div key={category.id}>
+                <p className={"categoryName"}>{category.id}</p>
+                <div key={category.id} className={"categoryContainer"}>
+                    <div className={"scroller"}>
+                        <div className={"categorySuggestions"}>
+                            {category.suggestions.map((suggestion) => suggestionChip(suggestion))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+    const suggestionChip = (suggestion) => {
+        return (
+            <div className={"suggestion"} key={suggestion}
+                 onClick={() => handleClickSuggestion(suggestion)}>
+                <p>{suggestion}</p>
+            </div>
+        )
+    }
+    const content = () => {
+        return (
+            <div className={"modalContent"}>
+                <p className={"message"}>Select an example to add it to your counters.</p>
+                {NamesSuggestions.map((category) => namesCategoryScroller(category))}
+            </div>
+        )
+    }
     return (<Sheet isOpen={open} onClose={() => dispatch(setOpenNamesExamplesModal(false))}>
         <Sheet.Container>
             <Sheet.Header>
-                <div className={"modalHeader"}>
-                    <img src={CloseIcon} onClick={() => dispatch(setOpenNamesExamplesModal(false))} alt={""}/>
-                    <h1>Examples</h1>
-                </div>
+                {header()}
             </Sheet.Header>
             <Sheet.Content>
-                <div>
-                    <div className={"modalContent"}>
-                        <p className={"message"}>Select an example to add it to your counters.</p>
-                        {
-                            NamesSuggestions.map((category) =>
-                                <div key={category.id}>
-                                    <p className={"categoryName"}>{category.id}</p>
-                                    <div key={category.id} className={"categoryContainer"}>
-                                        <div className={"scroller"}>
-                                            <div className={"categorySuggestions"}>
-                                                {
-                                                    category.suggestions.map((suggestion) =>
-                                                        <div className={"suggestion"} key={suggestion}
-                                                             onClick={() => handleClickSuggestion(suggestion)}>
-                                                            <p>{suggestion}</p>
-                                                        </div>)
-                                                }
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            )
-                        }
-                    </div>
-                </div>
+                {content()}
             </Sheet.Content>
         </Sheet.Container>
         <Sheet.Backdrop/>

@@ -1,0 +1,47 @@
+.listSummary {
+  position: sticky;
+  top: 0px;
+  background-color: #FAFAFA;
+  padding-left: 9px;
+  padding-bottom: 7px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  padding-top: 17px;
+  .itemQty {
+    font-size: 17px;
+    font-weight: 600;
+    color: #4A4A4A;
+    margin-top: 0px;
+    margin-right: 7px;
+    margin-bottom: 0px;
+  }
+
+  .totalCount {
+    margin-top: 0px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #888B90;
+    margin-bottom: 0px;
+  }
+
+  .itemSelected {
+    font-size: 17px;
+    font-weight: 600;
+    color: #FF9500;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .refresh {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    p {
+      margin: 0px 7px;
+      font-weight: 500;
+      font-size: 17px;
+      color: #FF9500;
+    }
+  }
+}

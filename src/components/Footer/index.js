@@ -19,10 +19,13 @@ const Footer = () => {
         <div className={`footer ${disabled ? 'disabled' : ''}`}>
             <div className={"buttonsContainer"}>
                 <div className={`itemSelectedButtons clickable ${selectedCounter === null ? 'hidden' : ''}`}>
-                    <button className={"secondaryButton"}
-                            onClick={() => dispatch(setOpenDeleteConfirmationModal(true))}>
-                        <img src={DeleteIcon} alt={""}/>
-                    </button>
+                    <div>
+                        <button className={"secondaryButton"}
+                                onClick={() => dispatch(setOpenDeleteConfirmationModal(true))}>
+                            <img src={DeleteIcon} alt={""}/>
+                        </button>
+                        {showTooltip && <Tooltip/>}
+                    </div>
                     <button className={"secondaryButton"} onClick={() => dispatch(setShowTooltip(true))}>
                         <img src={ShareIcon} alt={""}/>
                     </button>
@@ -33,7 +36,6 @@ const Footer = () => {
                 </button>
             </div>
             {disabled && <div className={"disableOverlay"}/>}
-            {showTooltip && <Tooltip/>}
         </div>
     )
 }

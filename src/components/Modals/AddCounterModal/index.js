@@ -13,10 +13,6 @@ const AddCounterModal = () => {
         loading: state.loading
     }));
 
-    const handleTextChange = (text) => {
-        dispatch(setNewCounterName(text));
-    };
-
     const handleCloseModal = () => {
         if (!loading) {
             dispatch(setOpenAddCounterModal(false));
@@ -24,27 +20,42 @@ const AddCounterModal = () => {
         }
     };
 
-    return (<Sheet isOpen={open} onClose={handleCloseModal}>
-        <Sheet.Container>
-            <Sheet.Header>
-                <div className={"modalHeader"}>
-                    <img src={CloseIcon} onClick={handleCloseModal} alt={""}/>
-                    <h1>Create counter</h1>
-                    <button className={"mainButton"} onClick={() => dispatch(addCounter(newCounterName))}
-                            disabled={newCounterName === '' || loading}>Save
-                    </button>
-                </div>
-            </Sheet.Header>
-            <Sheet.Content>
-                <div className={`modalContent ${loading ? 'disabled' : ''}`}>
-                    <InputText value={newCounterName} label={"Name"} setInputText={handleTextChange}/>
-                    <p className={"message"}>Give it a name. Creative block? <span
-                        onClick={() => dispatch(setOpenNamesExamplesModal(true))}>See examples.</span></p>
-                </div>
-            </Sheet.Content>
-        </Sheet.Container>
-        <Sheet.Backdrop/>
-    </Sheet>)
+    const header = () => {
+        return (
+            <div className={"modalHeader"}>
+                <img src={CloseIcon} onClick={handleCloseModal} alt={""}/>
+                <h1>Create counter</h1>
+                <button className={"mainButton"} onClick={() => dispatch(addCounter(newCounterName))}
+                        disabled={newCounterName === '' || loading}>Save
+                </button>
+            </div>
+        )
+    }
+
+    const content = () => {
+        return (
+            <div className={`modalContent ${loading ? 'disabled' : ''}`}>
+                <InputText value={newCounterName} label={"Name"}
+                           setInputText={(text) => dispatch(setNewCounterName(text))}/>
+                <p className={"message"}>Give it a name. Creative block? <span
+                    onClick={() => dispatch(setOpenNamesExamplesModal(true))}>See examples.</span></p>
+            </div>
+        )
+    }
+
+    return (
+        <Sheet isOpen={open} onClose={handleCloseModal}>
+            <Sheet.Container>
+                <Sheet.Header>
+                    {header()}
+                </Sheet.Header>
+                <Sheet.Content>
+                    {content()}
+                </Sheet.Content>
+            </Sheet.Container>
+            <Sheet.Backdrop/>
+        </Sheet>
+    )
 };
 
 export default AddCounterModal;

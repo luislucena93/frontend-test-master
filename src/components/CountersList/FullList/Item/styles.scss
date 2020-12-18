@@ -1,0 +1,47 @@
+.item {
+  display: flex;
+  flex-direction: row;
+  padding: 16px 8px 14px 8px;
+  margin-top: 7px;
+  align-items: flex-start;
+  &.selected {
+    background-color: rgba(255, 149, 0, 0.2);
+    border-radius: 6px;
+  }
+  .itemName {
+    margin: 0px;
+    font-size: 17px;
+    width: 100%;
+  }
+  .counterButtons {
+    margin-left: 16px;
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 600;
+      color: #212121;
+      &.zero {
+        color: #888B90;
+      }
+    }
+    button {
+      width: 20px;
+      height: 20px;
+      box-shadow: none;
+      padding: 0;
+      display: flex;
+      border: none;
+      background: none;
+      &:focus {
+        outline: none;
+      }
+      img {
+        margin: auto;
+      }
+    }
+  }
+}
