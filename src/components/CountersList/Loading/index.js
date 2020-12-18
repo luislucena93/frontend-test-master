@@ -1,28 +1,22 @@
 import React, {useEffect, useState} from 'react';
+import LodingImage from '../../../images/Activity Indicator.png';
 import './styles.scss';
 
 const Loading = () => {
-    const [loadingStep, setLoadingStep] = useState(['a', 'b', 'c']);
+    const [loadingTransparent, setLoadingTransparent] = useState(true);
     useEffect(() => {
         const interval = setInterval(() => {
             updateLoading();
-        }, 500);
+        }, 600);
         return () => clearInterval(interval);
     }, []);
 
     const updateLoading = () => {
-        setLoadingStep((loadingStep) => {
-            const last = loadingStep.pop();
-            return [last, ...loadingStep];
-        });
+        setLoadingTransparent((loadingTransparent) => !loadingTransparent);
     }
     return (
-        <div className={'loading'}>
-            <div className={`circle first ${loadingStep[2]}`}>
-                <div className={`circle second ${loadingStep[1]}`}>
-                    <div className={`circle third ${loadingStep[0]}`}/>
-                </div>
-            </div>
+        <div className={"loading"}>
+            <img className={`activityIndicator ${loadingTransparent ? 'transparent' : ''}`} src={LodingImage}/>
         </div>
     )
 }

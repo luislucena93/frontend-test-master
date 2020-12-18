@@ -30,10 +30,20 @@ function counters(state = [], action) {
     }
 }
 
-function loading(state = false, action) {
+function selectedCounter(state = null, action) {
     switch (action.type) {
-        case SET_LOADING:
-            return action.loading;
+        case SET_SELECTED_COUNTER:
+            return action.counterId;
+        default:
+            return state;
+    }
+}
+
+
+function newCounterName(state = '', action) {
+    switch (action.type) {
+        case SET_NEW_COUNTER_NAME:
+            return action.counterName;
         default:
             return state;
     }
@@ -45,6 +55,24 @@ function connectionError(state = null, action) {
             return action.error;
         case CLEAR_CONNECTION_ERROR:
             return null;
+        default:
+            return state;
+    }
+}
+
+function refreshing(state = false, action) {
+    switch (action.type) {
+        case SET_REFRESHING:
+            return action.refreshing;
+        default:
+            return state;
+    }
+}
+
+function loading(state = false, action) {
+    switch (action.type) {
+        case SET_LOADING:
+            return action.loading;
         default:
             return state;
     }
@@ -79,37 +107,10 @@ function openNamesExamplesModal(state = false, action) {
     }
 }
 
-function selectedCounter(state = null, action) {
-    switch (action.type) {
-        case SET_SELECTED_COUNTER:
-            return action.counterId;
-        default:
-            return state;
-    }
-}
-
 function openDeleteConfirmationModal(state = false, action) {
     switch (action.type) {
         case SET_OPEN_DELETE_CONFIRMATION_MODAL:
             return action.open;
-        default:
-            return state;
-    }
-}
-
-function newCounterName(state = '', action) {
-    switch (action.type) {
-        case SET_NEW_COUNTER_NAME:
-            return action.counterName;
-        default:
-            return state;
-    }
-}
-
-function refreshing(state = false, action) {
-    switch (action.type) {
-        case SET_REFRESHING:
-            return action.refreshing;
         default:
             return state;
     }
@@ -136,15 +137,15 @@ function showTooltip(state = false, action) {
 
 const CountersApp = combineReducers({
     counters,
+    selectedCounter,
+    newCounterName,
     connectionError,
+    refreshing,
     loading,
     searchFilter,
     openAddCounterModal,
     openNamesExamplesModal,
-    selectedCounter,
     openDeleteConfirmationModal,
-    newCounterName,
-    refreshing,
     openErrorModal,
     showTooltip,
 })

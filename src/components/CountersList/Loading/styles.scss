@@ -11,37 +11,12 @@
   left: 0;
 }
 
-.circle {
-  transition: background-color 0.5s linear,;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.activityIndicator {
+  transition: opacity 0.6s ease-in-out;
+  opacity: 1;
+  &.transparent {
+    transition: opacity 0.6s ease-in-out;
+    opacity: 0;
+  }
 }
 
-.first {
-  width: 114px;
-  height: 114px;
-}
-
-.second {
-  width: 70px;
-  height: 70px;
-}
-
-.third {
-  width: 46px;
-  height: 46px;
-}
-
-.a {
-  background-color: rgb(255, 149, 0);
-}
-
-.b {
-  background-color: rgb(255, 199, 120);
-}
-
-.c {
-  background-color: rgb(255, 224, 181);
-}
