@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import Sheet from 'react-modal-sheet';
-import CloseIcon from '../../images/Close.png';
+import CloseIcon from '../../../images/Close.png';
 import './styles.scss';
-import {setNewCounterName, setOpenNamesExamplesModal} from "../../actions/index";
+import {setNewCounterName, setOpenNamesExamplesModal} from "../../../actions/index";
 
 const NamesExamplesModal = () => {
     const dispatch = useDispatch();
@@ -23,7 +23,7 @@ const NamesExamplesModal = () => {
         <Sheet.Container>
             <Sheet.Header>
                 <div className={"modalHeader"}>
-                    <img src={CloseIcon} onClick={() => dispatch(setOpenNamesExamplesModal(false))}/>
+                    <img src={CloseIcon} onClick={() => dispatch(setOpenNamesExamplesModal(false))} alt={""}/>
                     <h1>Examples</h1>
                 </div>
             </Sheet.Header>
@@ -33,7 +33,7 @@ const NamesExamplesModal = () => {
                         <p className={"message"}>Select an example to add it to your counters.</p>
                         {
                             NamesSuggestions.map((category) =>
-                                <div>
+                                <div key={category.id}>
                                     <p className={"categoryName"}>{category.id}</p>
                                     <div key={category.id} className={"categoryContainer"}>
                                         <div className={"scroller"}>

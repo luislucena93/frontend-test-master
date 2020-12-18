@@ -1,0 +1,101 @@
+.overlay {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99999999;
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.modalWindow {
+  width: calc(100% - 51px);
+  max-width: 410px;
+  background-color: #FAFAFA;
+  box-shadow: 0 24px 38px rgba(0, 0, 0, 0.14);
+  border-radius: 10px;
+  .modalContentContainer {
+    padding: 19px 27px;
+    height: calc(100% - 38px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    .modalTitle {
+      margin-top: 0;
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 22px;
+    }
+    .modalSubtitle {
+      margin-top: 0;
+      font-size: 17px;
+      font-weight: 400;
+      color: #4A4A4A;
+    }
+    .modalButtons {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+.modalHeader {
+  padding: 0 16px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid rgba(196, 196, 196, 0.15);
+  h1 {
+    font-size: 22px;
+    font-weight: 600;
+    width: 100%;
+    margin-left: 16px;
+  }
+}
+
+.modalContent {
+  padding: 0 18px;
+  &.disabled {
+    opacity: 0.2;
+  }
+  .message {
+    font-size: 15px;
+    color: #888B90;
+    span {
+      text-decoration: underline;
+    }
+  }
+}
+
+.react-modal-sheet-backdrop {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.react-modal-sheet-container {
+  height: calc(100% - env(safe-area-inset-top) - 15px) !important;
+}
+
+@media (min-width: 768px) {
+  .react-modal-sheet-container {
+    max-width: 485px;
+    max-height: 612px;
+    top: calc((100vh - 612px) / 2);
+    position: relative !important;
+    margin: auto;
+    border-radius: 8px;
+  }
+}

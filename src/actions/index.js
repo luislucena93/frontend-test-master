@@ -11,10 +11,21 @@ export const SET_SELECTED_COUNTER = "SET_SELECTED_COUNTER";
 export const SET_OPEN_DELETE_CONFIRMATION_MODAL = "SET_OPEN_DELETE_CONFIRMATION_MODAL";
 export const REMOVE_COUNTER = "REMOVE_COUNTER";
 export const SET_NEW_COUNTER_NAME = "SET_NEW_COUNTER_NAME";
+export const SET_REFRESHING = "SET_REFRESHING";
+export const CLEAR_CONNECTION_ERROR = "CLEAR_CONNECTION_ERROR";
+export const SET_OPEN_ERROR_MODAL = "SET_OPEN_ERROR_MODAL";
+export const SET_SHOW_TOOLTIP = "SET_SHOW_TOOLTIP";
+
+export const ERROR_GET_COUNTERS = "ERROR_GET_COUNTERS";
+export const ERROR_INC_COUNTER = "ERROR_INC_COUNTER";
+export const ERROR_DEC_COUNTER = "ERROR_DEC_COUNTER";
+export const ERROR_DEL_COUNTER = "ERROR_DEL_COUNTER";
+export const ERROR_ADD_COUNTER = "ERROR_ADD_COUNTER";
 
 export const getCounters = () => {
     return dispatch => {
         dispatch(setLoading(true));
+        dispatch(clearConnectionError());
         fetch('/api/v1/counter', {method: 'get'})
             .then((response) => {
                 response.json()
@@ -22,14 +33,19 @@ export const getCounters = () => {
                         dispatch(setCounters(counters));
                         dispatch(setLoading(false))
                     })
-                    .catch((err) => dispatch(setConnectionError(true)))
             })
-            .catch((err) => dispatch(setConnectionError(true)))
+            .catch(() => {
+                dispatch(setConnectionError('ERROR_GET_COUNTERS'));
+                dispatch(setLoading(false));
+            })
     }
 };
 
 export const incrementCounter = (counterId) => {
     return dispatch => {
+        dispatch(clearConnectionError());
+        dispatch(setOpenErrorModal(false));
+        dispatch(setRefreshing(true));
         fetch('/api/v1/counter/inc', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
@@ -38,13 +54,21 @@ export const incrementCounter = (counterId) => {
             response.json()
                 .then((counter) => {
                     dispatch(updateCounter(counter));
+                    dispatch(setRefreshing(false));
                 })
+        }).catch(() => {
+            dispatch(setConnectionError(ERROR_INC_COUNTER));
+            dispatch(setOpenErrorModal(true));
+            dispatch(setRefreshing(false));
         })
     }
 }
 
 export const decrementCounter = (counterId) => {
     return dispatch => {
+        dispatch(clearConnectionError());
+        dispatch(setOpenErrorModal(false));
+        dispatch(setRefreshing(true));
         fetch('/api/v1/counter/dec', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
@@ -53,13 +77,21 @@ export const decrementCounter = (counterId) => {
             response.json()
                 .then((counter) => {
                     dispatch(updateCounter(counter));
+                    dispatch(setRefreshing(false));
                 })
+        }).catch(() => {
+            dispatch(setConnectionError(ERROR_DEC_COUNTER))
+            dispatch(setOpenErrorModal(true));
+            dispatch(setRefreshing(false));
         })
+
     }
 }
 
 export const addCounter = (counterName) => {
     return dispatch => {
+        dispatch(clearConnectionError());
+        dispatch(setOpenErrorModal(false));
         dispatch(setLoading(true));
         fetch('/api/v1/counter', {
             method: 'post',
@@ -73,12 +105,18 @@ export const addCounter = (counterName) => {
                     dispatch(setOpenAddCounterModal(false));
                     dispatch(setNewCounterName(''))
                 })
+        }).catch(() => {
+            dispatch(setConnectionError(ERROR_ADD_COUNTER));
+            dispatch(setLoading(false));
+            dispatch(setOpenErrorModal(true));
         })
     }
 }
 
 export const deleteCounter = (counterId) => {
     return dispatch => {
+        dispatch(clearConnectionError());
+        dispatch(setOpenErrorModal(false));
         fetch('/api/v1/counter', {
             method: 'delete',
             headers: {'Content-Type': 'application/json'},
@@ -92,9 +130,30 @@ export const deleteCounter = (counterId) => {
                         dispatch(setSelectedCounter(null));
                     }, 200);
                 })
+        }).catch(() => {
+            dispatch(setConnectionError(ERROR_DEL_COUNTER));
+            dispatch(setOpenErrorModal(true));
         })
     }
 }
+
+export const refreshCounters = () => {
+    return dispatch => {
+        dispatch(clearConnectionError());
+        dispatch(setRefreshing(true));
+        fetch('/api/v1/counter', {method: 'get'})
+            .then((response) => {
+                response.json()
+                    .then((counters) => {
+                        dispatch(setCounters(counters));
+                        dispatch(setRefreshing(false))
+                    })
+            })
+            .catch((err) => dispatch(setConnectionError(ERROR_GET_COUNTERS)))
+    }
+}
+
+export const setRefreshing = (refreshing) => ({type: SET_REFRESHING, refreshing});
 
 export const setNewCounterName = (counterName) => ({type: SET_NEW_COUNTER_NAME, counterName})
 
@@ -118,6 +177,12 @@ export const setCounters = (counters) => ({type: SET_COUNTERS, counters});
 
 export const setConnectionError = (error) => ({type: SET_CONNECTION_ERROR, error});
 
+export const clearConnectionError = () => ({type: CLEAR_CONNECTION_ERROR});
+
 export const updateCounter = (counter) => ({type: UPDATE_COUNTER, counter});
 
 export const addNewCounter = (counter) => ({type: ADD_COUNTER, counter});
+
+export const setOpenErrorModal = (open) => ({type: SET_OPEN_ERROR_MODAL, open});
+
+export const setShowTooltip = (show) => ({type: SET_SHOW_TOOLTIP, show});

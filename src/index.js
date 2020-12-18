@@ -12,8 +12,7 @@ import CountersApp from './reducers/index';
 import MainScreen from './pages/MainScreen';
 import WelcomeScreen from './pages/WelcomeScreen';
 import './styles/commonStyles.scss';
-import './styles/mainScreenStyles.scss';
-import './styles/welcomeScreenStyles.scss';
+import './styles/modalStyles.scss';
 
 
 let store = createStore(CountersApp, applyMiddleware(thunkMiddleware));

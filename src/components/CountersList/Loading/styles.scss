@@ -1,0 +1,47 @@
+
+.loading {
+  z-index: 99999999;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.circle {
+  transition: background-color 0.5s linear,;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first {
+  width: 114px;
+  height: 114px;
+}
+
+.second {
+  width: 70px;
+  height: 70px;
+}
+
+.third {
+  width: 46px;
+  height: 46px;
+}
+
+.a {
+  background-color: rgb(255, 149, 0);
+}
+
+.b {
+  background-color: rgb(255, 199, 120);
+}
+
+.c {
+  background-color: rgb(255, 224, 181);
+}

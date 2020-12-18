@@ -6,7 +6,8 @@ import {
     UPDATE_COUNTER,
     SET_SEARCH_FILTER_ACTIVE,
     SET_SEARCH_FILTER_TEXT, SET_OPEN_ADD_COUNTER_MODAL, ADD_COUNTER, SET_OPEN_NAMES_EXAMPLES_MODAL,
-    SET_SELECTED_COUNTER, SET_OPEN_DELETE_CONFIRMATION_MODAL, REMOVE_COUNTER, SET_NEW_COUNTER_NAME
+    SET_SELECTED_COUNTER, SET_OPEN_DELETE_CONFIRMATION_MODAL, REMOVE_COUNTER, SET_NEW_COUNTER_NAME, SET_REFRESHING,
+    CLEAR_CONNECTION_ERROR, SET_OPEN_ERROR_MODAL, SET_SHOW_TOOLTIP
 } from '../actions/index'
 
 function counters(state = [], action) {
@@ -38,10 +39,12 @@ function loading(state = false, action) {
     }
 }
 
-function connectionError(state = false, action) {
+function connectionError(state = null, action) {
     switch (action.type) {
         case SET_CONNECTION_ERROR:
             return action.error;
+        case CLEAR_CONNECTION_ERROR:
+            return null;
         default:
             return state;
     }
@@ -103,6 +106,33 @@ function newCounterName(state = '', action) {
     }
 }
 
+function refreshing(state = false, action) {
+    switch (action.type) {
+        case SET_REFRESHING:
+            return action.refreshing;
+        default:
+            return state;
+    }
+}
+
+function openErrorModal(state = false, action) {
+    switch (action.type) {
+        case SET_OPEN_ERROR_MODAL:
+            return action.open;
+        default:
+            return state;
+    }
+}
+
+function showTooltip(state = false, action) {
+    switch (action.type) {
+        case SET_SHOW_TOOLTIP:
+            return action.show;
+        default:
+            return state;
+    }
+}
+
 
 const CountersApp = combineReducers({
     counters,
@@ -114,6 +144,9 @@ const CountersApp = combineReducers({
     selectedCounter,
     openDeleteConfirmationModal,
     newCounterName,
+    refreshing,
+    openErrorModal,
+    showTooltip,
 })
 
 export default CountersApp;

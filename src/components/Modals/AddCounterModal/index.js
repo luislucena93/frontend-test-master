@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import Sheet from 'react-modal-sheet';
-import CloseIcon from '../../images/Close.png';
-import './styles.scss';
-import InputText from "../InputText/index";
-import {addCounter, setNewCounterName, setOpenAddCounterModal, setOpenNamesExamplesModal} from "../../actions/index";
+import CloseIcon from '../../../images/Close.png'
+import InputText from "./InputText/index";
+import {addCounter, setNewCounterName, setOpenAddCounterModal, setOpenNamesExamplesModal} from "../../../actions/index";
 
 const AddCounterModal = () => {
     const dispatch = useDispatch();
@@ -16,21 +15,22 @@ const AddCounterModal = () => {
 
     const handleTextChange = (text) => {
         dispatch(setNewCounterName(text));
-    }
+    };
 
     const handleCloseModal = () => {
         if (!loading) {
             dispatch(setOpenAddCounterModal(false));
+            dispatch(setNewCounterName(""));
         }
-    }
+    };
 
-    return (<Sheet isOpen={open} onClose={() => dispatch(setOpenAddCounterModal(false))}>
+    return (<Sheet isOpen={open} onClose={handleCloseModal}>
         <Sheet.Container>
             <Sheet.Header>
                 <div className={"modalHeader"}>
-                    <img src={CloseIcon} onClick={handleCloseModal}/>
+                    <img src={CloseIcon} onClick={handleCloseModal} alt={""}/>
                     <h1>Create counter</h1>
-                    <button onClick={() => dispatch(addCounter(newCounterName))}
+                    <button className={"mainButton"} onClick={() => dispatch(addCounter(newCounterName))}
                             disabled={newCounterName === '' || loading}>Save
                     </button>
                 </div>
@@ -45,6 +45,6 @@ const AddCounterModal = () => {
         </Sheet.Container>
         <Sheet.Backdrop/>
     </Sheet>)
-}
+};
 
 export default AddCounterModal;

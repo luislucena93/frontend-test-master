@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './styles.scss';
 
 const InputText = (props) => {
 
     const handleTextChange = (e) => {
         props.setInputText(e.target.value);
-    }
+    };
 
     return (
         <div>
@@ -16,6 +16,6 @@ const InputText = (props) => {
             </div>
         </div>
     )
-}
+};
 
 export default InputText;
