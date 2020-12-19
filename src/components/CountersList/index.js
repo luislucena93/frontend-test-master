@@ -11,14 +11,14 @@ import {
 
 const CounterList = () => {
     const dispatch = useDispatch();
-    const {counters, filteredCounters, selectedCounter, loading, connectionError, searchFilter, refreshing, searchFilterEmpty} = useSelector(state => ({
+    const {counters, filteredCounters, selectedCounter, loading, connectionError, refreshing, searchFilterEmpty} = useSelector(state => ({
         counters: state.counters,
         filteredCounters: (state.searchFilter.isActive && state.searchFilter.text !== '') ?
-            state.counters.filter(counter => counter.title.toLowerCase().indexOf(state.searchFilter.text.toLowerCase()) === 0) : state.counters,
+            state.counters.filter(counter => counter.title.toLowerCase().indexOf(state.searchFilter.text.toLowerCase()) === 0) :
+            state.counters,
         selectedCounter: state.selectedCounter,
         loading: state.loading,
         connectionError: state.connectionError,
-        searchFilter: state.searchFilter,
         refreshing: state.refreshing,
         searchFilterEmpty: state.searchFilter.isActive && state.searchFilter.text === '',
     }));
