@@ -7,7 +7,7 @@ const Loading = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             updateLoading();
-        }, 600);
+        }, 500);
         return () => clearInterval(interval);
     }, []);
 
@@ -16,7 +16,7 @@ const Loading = () => {
     }
     return (
         <div className={"loading"}>
-            <img className={`activityIndicator ${loadingTransparent ? 'transparent' : ''}`} src={LodingImage}/>
+            <img className={`activityIndicator ${loadingTransparent ? 'transparent' : ''}`} src={LodingImage} alt={""}/>
         </div>
     )
 }

@@ -1,27 +1,15 @@
 import React, {useEffect, useState, useRef} from "react";
-import {useDispatch, useSelector} from 'react-redux';
-import {refreshCounters} from "../../../../actions/index";
 import RefreshIcon from '../../../../images/Refresh.png';
 import RefreshActiveIcon from '../../../../images/Refresh-active.png';
 import './styles.scss';
 
-const Summary = () => {
-    const {counters, selectedCounter, searchFilter, refreshing} = useSelector(state => ({
-        counters: (state.searchFilter.isActive && state.searchFilter.text !== '') ?
-            state.counters.filter(counter => counter.title.toLowerCase().indexOf(state.searchFilter.text.toLowerCase()) === 0) :
-            state.counters,
-        selectedCounter: state.selectedCounter,
-        searchFilter: state.searchFilter,
-        refreshing: state.refreshing,
-        disabled: state.searchFilter.isActive && state.searchFilter.text === '',
-    }));
+const Summary = (props) => {
 
-    const dispatch = useDispatch();
     const [refreshingDots, setRefreshingDots] = useState(0);
     const intervalRef = useRef();
 
     useEffect(() => {
-        if (refreshing) {
+        if (props.refreshing) {
             const id = setInterval(() => {
                 updateRefreshingDots();
             }, 500);
@@ -29,37 +17,36 @@ const Summary = () => {
         } else {
             clearInterval(intervalRef.current);
         }
-    }, [refreshing])
+    }, [props.refreshing])
 
     const updateRefreshingDots = () => {
         setRefreshingDots((refreshingDots) => refreshingDots < 3 ? refreshingDots + 1 : 0);
     }
 
-    const totalCount = counters.reduce((a, b) => a + (b.count || 0), 0);
 
     const handleClickRefresh = () => {
-        if (!refreshing) {
-            dispatch(refreshCounters())
+        if (!props.refreshing) {
+            props.refreshCounters();
         }
     }
 
     const getRefresh = () => {
         return (
             <div className={"refresh"}>
-                <img onClick={handleClickRefresh} src={refreshing ? RefreshActiveIcon : RefreshIcon} alt={""}/>
-                {refreshing && <p>Refreshing{".".repeat(refreshingDots)}</p>}
+                <img onClick={handleClickRefresh} src={props.refreshing ? RefreshActiveIcon : RefreshIcon} alt={""}/>
+                {props.refreshing && <p>Refreshing{".".repeat(refreshingDots)}</p>}
             </div>
         )
     }
 
-    if (selectedCounter === null) {
-        if (searchFilter.isActive && counters.length === 0) {
+    if (props.selectedCounter === null) {
+        if (props.hidden) {
             return null;
         }
         return (
             <div className={"listSummary"}>
-                <p className={"itemQty"}>{counters.length} items</p>
-                <p className={"totalCount"}>{totalCount} times</p>
+                <p className={"itemQty"}>{props.countersQty} items</p>
+                <p className={"totalCount"}>{props.totalCount} times</p>
                 {getRefresh()}
             </div>
         )

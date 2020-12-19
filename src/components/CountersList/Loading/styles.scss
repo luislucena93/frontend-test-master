@@ -12,10 +12,10 @@
 }
 
 .activityIndicator {
-  transition: opacity 0.6s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
   opacity: 1;
   &.transparent {
-    transition: opacity 0.6s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
     opacity: 0;
   }
 }

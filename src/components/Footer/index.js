@@ -9,8 +9,9 @@ import {setOpenAddCounterModal, setOpenDeleteConfirmationModal, setShowTooltip} 
 
 const Footer = () => {
     const dispatch = useDispatch();
-    const {selectedCounter, disabled, showTooltip} = useSelector(state => ({
-        selectedCounter: state.selectedCounter,
+    const {selectedCounterId, selectedCounter, disabled, showTooltip} = useSelector(state => ({
+        selectedCounterId: state.selectedCounter,
+        selectedCounter: state.counters.find((counter) => counter.id === state.selectedCounter) || {},
         disabled: (state.searchFilter.isActive && state.searchFilter.text === '') || state.loading,
         showTooltip: state.showTooltip
     }));
@@ -18,13 +19,14 @@ const Footer = () => {
     return (
         <div className={`footer ${disabled ? 'disabled' : ''}`}>
             <div className={"buttonsContainer"}>
-                <div className={`itemSelectedButtons clickable ${selectedCounter === null ? 'hidden' : ''}`}>
+                <div className={`itemSelectedButtons clickable ${selectedCounterId === null ? 'hidden' : ''}`}>
                     <div>
                         <button className={"secondaryButton"}
                                 onClick={() => dispatch(setOpenDeleteConfirmationModal(true))}>
                             <img src={DeleteIcon} alt={""}/>
                         </button>
-                        {showTooltip && <Tooltip/>}
+                        {showTooltip &&
+                        <Tooltip counter={selectedCounter} close={() => dispatch(setShowTooltip(false))}/>}
                     </div>
                     <button className={"secondaryButton"} onClick={() => dispatch(setShowTooltip(true))}>
                         <img src={ShareIcon} alt={""}/>

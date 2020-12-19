@@ -1,22 +1,14 @@
 import React, {useEffect} from "react";
-import {useDispatch, useSelector} from 'react-redux'
 import Item from './Item/index';
 import Summary from './Summary/index';
 import './styles.scss';
-import {
-    setSelectedCounter,
-} from "../../../actions/index";
 
-const FullList = () => {
-        const dispatch = useDispatch();
-        const {counters, selectedCounter, searchFilter, disabled} = useSelector(state => ({
-            counters: (state.searchFilter.isActive && state.searchFilter.text !== '') ?
-                state.counters.filter(counter => counter.title.toLowerCase().indexOf(state.searchFilter.text.toLowerCase()) === 0) :
-                state.counters,
-            selectedCounter: state.selectedCounter,
-            searchFilter: state.searchFilter,
-            disabled: state.searchFilter.isActive && state.searchFilter.text === '',
-        }));
+const FullList = (props) => {
+        const {
+            counters, selectedCounter, disabled, refreshing, handleClickOutsideList, handleClickOnListItem,
+            handleClickIncItem, handleClickDecItem, handleClickRefresh
+        } = props;
+        const totalCount = counters.reduce((a, b) => a + (b.count || 0), 0);
 
         useEffect(() => {
             window.addEventListener('click', detectClickOutside);
@@ -33,27 +25,50 @@ const FullList = () => {
                 }
             });
             if (clickOutside) {
-                dispatch(setSelectedCounter(null));
+                handleClickOutsideList();
             }
         };
 
-        const getEmptyListMessage = () => {
-            if (searchFilter.isActive && counters.length === 0) {
+        const EmptyList = () => {
+            if (counters.length === 0) {
                 return <div className={"noResults"}><p>No results</p></div>
+            }
+            return null
+        }
+
+        const ItemList = () => {
+            if (counters.length > 0) {
+                return (
+                    <div className={"itemsList clickable"}>
+                        {counters.map((counter) =>
+                            <Item counter={counter} selectedCounter={selectedCounter} key={counter.id}
+                                  refreshing={refreshing}
+                                  decCounter={() => handleClickDecItem(counter.id)}
+                                  incCounter={() => handleClickIncItem(counter.id)}
+                                  selectCounter={() => handleClickOnListItem(counter.id)}
+                            />
+                        )}
+                    </div>
+                )
+            }
+            return null
+        }
+
+        const DisableOverlay = () => {
+            if (disabled) {
+                return <div className={"disableOverlay"}/>
             }
             return null
         }
 
         return (
             <div className={`fullList ${disabled ? 'disabled' : ''}`}>
-                <Summary/>
-                {getEmptyListMessage()}
-                <div className={"itemsList clickable"}>
-                    {counters.map((counter) =>
-                        <Item counter={counter} selectedCounter={selectedCounter} key={counter.id}/>
-                    )}
-                </div>
-                {disabled && <div className={"disableOverlay"}/>}
+                <Summary refreshing={refreshing} totalCount={totalCount} countersQty={counters.length}
+                         hidden={counters.length === 0} selectedCounter={selectedCounter}
+                         refreshCounters={() => handleClickRefresh()}/>
+                <EmptyList/>
+                <ItemList/>
+                <DisableOverlay/>
             </div>
         );
     }
