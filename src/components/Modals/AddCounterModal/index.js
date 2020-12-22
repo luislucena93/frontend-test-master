@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import Sheet from 'react-modal-sheet';
 import CloseIcon from '../../../images/Close.png'
@@ -13,20 +13,27 @@ const AddCounterModal = () => {
         loading: state.loading
     }));
 
-    const handleCloseModal = () => {
+    const handleCloseModal = useCallback(() => {
         if (!loading) {
             dispatch(setOpenAddCounterModal(false));
             dispatch(setNewCounterName(""));
         }
-    };
+    }, [dispatch]);
+
+    const dispatchAddCounter = useCallback((newName) => dispatch(addCounter(newName)), [dispatch]);
+
+    const dispatchSetNewCounterName = useCallback((text) => dispatch(setNewCounterName(text)), [dispatch]);
+
+    const dispatchOpenNamesExamplesModal = useCallback(() => dispatch(setOpenNamesExamplesModal(true)), [dispatch]);
 
     const header = () => {
         return (
             <div className={"modalHeader"}>
-                <img src={CloseIcon} onClick={handleCloseModal} alt={""}/>
+                <img src={CloseIcon} onClick={handleCloseModal} alt={"close"}/>
                 <h1>Create counter</h1>
-                <button className={"mainButton"} onClick={() => dispatch(addCounter(newCounterName))}
-                        disabled={newCounterName === '' || loading}>Save
+                <button className={"mainButton"} onClick={() => dispatchAddCounter(newCounterName)}
+                        disabled={newCounterName === '' || loading}>
+                    Save
                 </button>
             </div>
         )
@@ -34,11 +41,11 @@ const AddCounterModal = () => {
 
     const content = () => {
         return (
-            <div className={`modalContent ${loading ? 'disabled' : ''}`}>
+            <div className={`modalContent ${loading ? 'disabled' : ''}`} data-testid={"addCounterModalContent"}>
                 <InputText value={newCounterName} label={"Name"}
-                           setInputText={(text) => dispatch(setNewCounterName(text))}/>
+                           setInputText={dispatchSetNewCounterName}/>
                 <p className={"message"}>Give it a name. Creative block? <span
-                    onClick={() => dispatch(setOpenNamesExamplesModal(true))}>See examples.</span></p>
+                    onClick={dispatchOpenNamesExamplesModal}>See examples.</span></p>
             </div>
         )
     }

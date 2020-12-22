@@ -25,12 +25,12 @@ const Tooltip = (props) => {
 
     return (
         <div>
-            <div className={"tooltipOverlay clickable"}/>
+            <div className={"tooltipOverlay clickable"} data-testid={"tooltipOverlay"}/>
             <div className={"tooltipContainer"}>
                 <div className={"tooltip"} id={"tooltip"}>
                     <div className={"leftSide"}>
                         <p className={"tooltipTitle"}>Share 1 counter</p>
-                        <button className={"secondaryButton"} onClick={() => copyToClipboard()}>Copy</button>
+                        <button className={"secondaryButton"} onClick={copyToClipboard}>Copy</button>
                     </div>
                     <div className={"paperNote"}>
                         <p>{counter.count} x {counter.title}</p>

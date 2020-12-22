@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import Sheet from 'react-modal-sheet';
 import CloseIcon from '../../../images/Close.png';
@@ -14,15 +14,17 @@ const NamesExamplesModal = () => {
         {id: 'Misc', suggestions: ["Times sneezed", "Naps", "Day dreaming"]},
     ];
 
-    const handleClickSuggestion = (suggestion) => {
+    const handleClickSuggestion = useCallback((suggestion) => {
         dispatch(setNewCounterName(suggestion));
         dispatch(setOpenNamesExamplesModal(false));
-    }
+    }, [dispatch]);
+
+    const dispatchCloseNamesExamplesModal = useCallback(() => dispatch(setOpenNamesExamplesModal(false)), [dispatch]);
 
     const header = () => {
         return (
             <div className={"modalHeader"}>
-                <img src={CloseIcon} onClick={() => dispatch(setOpenNamesExamplesModal(false))} alt={""}/>
+                <img src={CloseIcon} onClick={dispatchCloseNamesExamplesModal} alt={"close"}/>
                 <h1>Examples</h1>
             </div>
         );
@@ -59,7 +61,7 @@ const NamesExamplesModal = () => {
             </div>
         )
     }
-    return (<Sheet isOpen={open} onClose={() => dispatch(setOpenNamesExamplesModal(false))}>
+    return (<Sheet isOpen={open} onClose={dispatchCloseNamesExamplesModal}>
         <Sheet.Container>
             <Sheet.Header>
                 {header()}

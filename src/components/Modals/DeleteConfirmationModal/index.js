@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {deleteCounter, setOpenDeleteConfirmationModal} from "../../../actions/index";
 
@@ -9,17 +9,22 @@ const DeleteConfirmationModal = () => {
         open: state.openDeleteConfirmationModal
     }));
 
+    const dispatchCloseDeleteConfirmationModal = useCallback(() => dispatch(setOpenDeleteConfirmationModal(false)), [dispatch]);
+
+    const dispatchDeleteCounter = useCallback((counterId) => dispatch(deleteCounter(counterId)), [dispatch]);
+
     const modalContent = () => {
         return (
             <div className={"modalContentContainer"}>
                 <p className={"modalTitle"}>Delete the "{counter ? counter.title : ""}" counter?</p>
                 <p className={"modalSubtitle"}>This cannot be undone</p>
                 <div className={"modalButtons"}>
-                    <button className={"mainButton"} onClick={() => dispatch(setOpenDeleteConfirmationModal(false))}>
+                    <button className={"mainButton"} onClick={dispatchCloseDeleteConfirmationModal}>
                         Cancel
                     </button>
                     <button className={"secondaryButton deleteButton"}
-                            onClick={() => dispatch(deleteCounter(counter.id))}>Delete
+                            onClick={() => dispatchDeleteCounter(counter.id)}>
+                        Delete
                     </button>
                 </div>
             </div>

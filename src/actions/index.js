@@ -68,8 +68,8 @@ export const removeCounter = (counterId) => ({type: REMOVE_COUNTER, counterId});
 
 
 //THUNK ASYNC ACTIONS
-export const getCounters = () => {
-    return dispatch => {
+export function getCounters() {
+    return function getCountersAction(dispatch) {
         dispatch(setLoading(true));
         dispatch(clearConnectionError());
         fetch('/api/v1/counter', {method: 'get'})
@@ -87,8 +87,8 @@ export const getCounters = () => {
     }
 };
 
-export const incrementCounter = (counterId) => {
-    return dispatch => {
+export function incrementCounter(counterId) {
+    return function incrementCounterAction(dispatch) {
         dispatch(clearConnectionError());
         dispatch(setOpenErrorModal(false));
         dispatch(setRefreshing(true));
@@ -110,8 +110,8 @@ export const incrementCounter = (counterId) => {
     }
 };
 
-export const decrementCounter = (counterId) => {
-    return dispatch => {
+export function decrementCounter(counterId) {
+    return function decrementCounterAction(dispatch) {
         dispatch(clearConnectionError());
         dispatch(setOpenErrorModal(false));
         dispatch(setRefreshing(true));
@@ -134,8 +134,8 @@ export const decrementCounter = (counterId) => {
     }
 };
 
-export const addCounter = (counterName) => {
-    return dispatch => {
+export function addCounter(counterName) {
+    return function addCounterAction(dispatch) {
         dispatch(clearConnectionError());
         dispatch(setOpenErrorModal(false));
         dispatch(setLoading(true));
@@ -160,7 +160,7 @@ export const addCounter = (counterName) => {
 };
 
 export const deleteCounter = (counterId) => {
-    return dispatch => {
+    return function deleteCounterAction(dispatch) {
         dispatch(clearConnectionError());
         dispatch(setOpenErrorModal(false));
         fetch('/api/v1/counter', {
@@ -183,8 +183,8 @@ export const deleteCounter = (counterId) => {
     }
 };
 
-export const refreshCounters = () => {
-    return dispatch => {
+export function refreshCounters() {
+    return function refreshCountersAction(dispatch) {
         dispatch(clearConnectionError());
         dispatch(setRefreshing(true));
         fetch('/api/v1/counter', {method: 'get'})

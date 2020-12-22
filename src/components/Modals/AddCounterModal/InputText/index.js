@@ -8,7 +8,7 @@ const InputText = (props) => {
             <p className={"inputLabel"}>{props.label}</p>
             <div className={"searchBox simple"}>
                 <input value={props.value} placeholder={props.placeholder} disabled={props.disabled}
-                       onChange={(e) => props.setInputText(e.target.value)}/>
+                       onChange={(e) => props.setInputText(e.target.value)} data-testid={"nameInput"}/>
             </div>
         </div>
     )

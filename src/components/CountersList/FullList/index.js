@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
 import Item from './Item/index';
 import Summary from './Summary/index';
+import DisableOverlay from '../../DisableOverlay/index';
 import './styles.scss';
 
 const FullList = (props) => {
@@ -42,10 +43,9 @@ const FullList = (props) => {
                     <div className={"itemsList clickable"}>
                         {counters.map((counter) =>
                             <Item counter={counter} selectedCounter={selectedCounter} key={counter.id}
-                                  refreshing={refreshing}
-                                  decCounter={() => handleClickDecItem(counter.id)}
-                                  incCounter={() => handleClickIncItem(counter.id)}
-                                  selectCounter={() => handleClickOnListItem(counter.id)}
+                                  refreshing={refreshing} decCounter={handleClickDecItem}
+                                  incCounter={handleClickIncItem}
+                                  selectCounter={handleClickOnListItem}
                             />
                         )}
                     </div>
@@ -54,21 +54,14 @@ const FullList = (props) => {
             return null
         }
 
-        const DisableOverlay = () => {
-            if (disabled) {
-                return <div className={"disableOverlay"}/>
-            }
-            return null
-        }
-
         return (
             <div className={`fullList ${disabled ? 'disabled' : ''}`}>
                 <Summary refreshing={refreshing} totalCount={totalCount} countersQty={counters.length}
                          hidden={counters.length === 0} selectedCounter={selectedCounter}
-                         refreshCounters={() => handleClickRefresh()}/>
+                         refreshCounters={handleClickRefresh}/>
                 <EmptyList/>
                 <ItemList/>
-                <DisableOverlay/>
+                <DisableOverlay disabled={disabled}/>
             </div>
         );
     }

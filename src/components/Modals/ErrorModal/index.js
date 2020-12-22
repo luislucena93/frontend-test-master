@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {
     decrementCounter,
@@ -13,6 +13,14 @@ const ErrorModal = () => {
         open: state.openErrorModal,
         connectionError: state.connectionError
     }));
+
+    const dispatchDeleteCounter = useCallback((counterId) => dispatch(deleteCounter(counterId)), [dispatch]);
+
+    const dispatcDecrementCounter = useCallback((counterId) => dispatch(decrementCounter(counterId)), [dispatch]);
+
+    const dispatchIncrementCounter = useCallback((counterId) => dispatch(incrementCounter(counterId)), [dispatch]);
+
+    const dispatchCloseErrorModal = useCallback(() => dispatch(setOpenErrorModal(false)), [dispatch]);
 
     const getTitle = () => {
         switch (connectionError) {
@@ -33,13 +41,13 @@ const ErrorModal = () => {
         let retryButtonAction;
         switch (connectionError) {
             case ERROR_DEL_COUNTER:
-                retryButtonAction = deleteCounter(counter.id);
+                retryButtonAction = dispatchDeleteCounter;
                 break;
             case ERROR_DEC_COUNTER:
-                retryButtonAction = decrementCounter(counter.id);
+                retryButtonAction = dispatcDecrementCounter;
                 break;
             case ERROR_INC_COUNTER:
-                retryButtonAction = incrementCounter(counter.id);
+                retryButtonAction = dispatchIncrementCounter;
                 break;
             default:
                 break
@@ -47,10 +55,11 @@ const ErrorModal = () => {
         return (
             <div className={"modalButtons"}>
                 {connectionError !== ERROR_ADD_COUNTER &&
-                <button className={"mainButton"} onClick={() => dispatch(retryButtonAction)}>Retry</button>
+                <button className={"mainButton"} onClick={() => retryButtonAction(counter.id)}>Retry</button>
                 }
                 <button className={connectionError !== ERROR_ADD_COUNTER ? "secondaryButton" : "mainButton"}
-                        onClick={() => dispatch(setOpenErrorModal(false))}>Dismiss
+                        onClick={dispatchCloseErrorModal}>
+                    Dismiss
                 </button>
             </div>
         )

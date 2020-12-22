@@ -4,12 +4,13 @@ import RefreshActiveIcon from '../../../../images/Refresh-active.png';
 import './styles.scss';
 
 const Summary = (props) => {
+    const {selectedCounter, refreshing, refreshCounters, countersQty, totalCount, hidden} = props;
 
     const [refreshingDots, setRefreshingDots] = useState(0);
     const intervalRef = useRef();
 
     useEffect(() => {
-        if (props.refreshing) {
+        if (refreshing) {
             const id = setInterval(() => {
                 updateRefreshingDots();
             }, 500);
@@ -17,7 +18,7 @@ const Summary = (props) => {
         } else {
             clearInterval(intervalRef.current);
         }
-    }, [props.refreshing])
+    }, [refreshing]);
 
     const updateRefreshingDots = () => {
         setRefreshingDots((refreshingDots) => refreshingDots < 3 ? refreshingDots + 1 : 0);
@@ -25,34 +26,34 @@ const Summary = (props) => {
 
 
     const handleClickRefresh = () => {
-        if (!props.refreshing) {
-            props.refreshCounters();
+        if (!refreshing) {
+            refreshCounters();
         }
     }
 
     const getRefresh = () => {
         return (
             <div className={"refresh"}>
-                <img onClick={handleClickRefresh} src={props.refreshing ? RefreshActiveIcon : RefreshIcon} alt={""}/>
-                {props.refreshing && <p>Refreshing{".".repeat(refreshingDots)}</p>}
+                <img onClick={handleClickRefresh} src={refreshing ? RefreshActiveIcon : RefreshIcon} alt={"refresh"}/>
+                {refreshing && <p>Refreshing{".".repeat(refreshingDots)}</p>}
             </div>
         )
-    }
+    };
 
-    if (props.selectedCounter === null) {
-        if (props.hidden) {
-            return null;
-        }
+    if (hidden) {
+        return null;
+    }
+    if (selectedCounter === null) {
         return (
-            <div className={"listSummary"}>
-                <p className={"itemQty"}>{props.countersQty} items</p>
-                <p className={"totalCount"}>{props.totalCount} times</p>
+            <div className={"listSummary"} data-testid={"listSummary"}>
+                <p className={"itemQty"}>{countersQty} {countersQty === 1 ? 'item' : 'items'}</p>
+                <p className={"totalCount"}>{totalCount} {totalCount === 1 ? 'time' : 'times'}</p>
                 {getRefresh()}
             </div>
         )
     }
     return (
-        <div className={"listSummary"}>
+        <div className={"listSummary"} data-testid={"listSummary"}>
             <p className={"itemSelected"}>1 selected</p>
             {getRefresh()}
         </div>

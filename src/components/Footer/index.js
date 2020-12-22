@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import PlusIcon from '../../images/Plus.png';
 import DeleteIcon from '../../images/Delete.png';
 import ShareIcon from '../../images/Share.png';
 import Tooltip from './Tooltip/index';
+import DisableOverlay from '../DisableOverlay/index';
 import './styles.scss';
 import {setOpenAddCounterModal, setOpenDeleteConfirmationModal, setShowTooltip} from "../../actions/index";
 
@@ -16,30 +17,38 @@ const Footer = () => {
         showTooltip: state.showTooltip
     }));
 
+    const dispatchCloseTooltip = useCallback(() => dispatch(setShowTooltip(false)), [dispatch]);
+
+    const dispatchOpenTooltip = useCallback(() => dispatch(setShowTooltip(true)), [dispatch]);
+
+    const dispatchOpenDeleteConfirmationModal = useCallback(() => dispatch(setOpenDeleteConfirmationModal(true)), [dispatch]);
+
+    const dispatchOpenAddCounterModal = useCallback(() => dispatch(setOpenAddCounterModal(true)), [dispatch]);
+
     return (
         <div className={`footer ${disabled ? 'disabled' : ''}`}>
             <div className={"buttonsContainer"}>
                 <div className={`itemSelectedButtons clickable ${selectedCounterId === null ? 'hidden' : ''}`}>
                     <div>
                         <button className={"secondaryButton"}
-                                onClick={() => dispatch(setOpenDeleteConfirmationModal(true))}>
-                            <img src={DeleteIcon} alt={""}/>
+                                onClick={dispatchOpenDeleteConfirmationModal}>
+                            <img src={DeleteIcon} alt={"delete"}/>
                         </button>
                         {showTooltip &&
-                        <Tooltip counter={selectedCounter} close={() => dispatch(setShowTooltip(false))}/>}
+                        <Tooltip counter={selectedCounter} close={dispatchCloseTooltip}/>}
                     </div>
-                    <button className={"secondaryButton"} onClick={() => dispatch(setShowTooltip(true))}>
-                        <img src={ShareIcon} alt={""}/>
+                    <button className={"secondaryButton"} onClick={dispatchOpenTooltip}>
+                        <img src={ShareIcon} alt={"share"}/>
                     </button>
                 </div>
                 <button className={"mainButton"}
-                        onClick={() => dispatch(setOpenAddCounterModal(true))}>
-                    <img src={PlusIcon} alt={""}/>
+                        onClick={dispatchOpenAddCounterModal}>
+                    <img src={PlusIcon} alt={"plus"}/>
                 </button>
             </div>
-            {disabled && <div className={"disableOverlay"}/>}
+            <DisableOverlay disabled={disabled}/>
         </div>
     )
-}
+};
 
 export default Footer;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {useSelector, useDispatch} from 'react-redux'
 import Loading from './Loading/index';
 import EmptyList from './EmptyList/index';
@@ -11,37 +11,32 @@ import {
 
 const CounterList = () => {
     const dispatch = useDispatch();
-    const {counters, filteredCounters, selectedCounter, loading, connectionError, refreshing, searchFilterEmpty} = useSelector(state => ({
+    const {counters, selectedCounter, loading, connectionError, refreshing, searchFilter} = useSelector(state => ({
         counters: state.counters,
-        filteredCounters: (state.searchFilter.isActive && state.searchFilter.text !== '') ?
-            state.counters.filter(counter => counter.title.toLowerCase().indexOf(state.searchFilter.text.toLowerCase()) === 0) :
-            state.counters,
         selectedCounter: state.selectedCounter,
         loading: state.loading,
         connectionError: state.connectionError,
         refreshing: state.refreshing,
-        searchFilterEmpty: state.searchFilter.isActive && state.searchFilter.text === '',
+        searchFilter: state.searchFilter,
     }));
 
-    const dispatchGetCounters = () => {
-        dispatch(getCounters());
-    }
+    const searchFilterEmpty = searchFilter.isActive && searchFilter.text === '';
 
-    const dispatchSetSelectedCounter = (counterId) => {
-        dispatch(setSelectedCounter(counterId));
-    }
+    const filteredCounters = (searchFilter.isActive && searchFilter.text !== '') ?
+        counters.filter(counter => counter.title.toLowerCase().indexOf(searchFilter.text.toLowerCase()) === 0) :
+        counters;
 
-    const dispatchIncrementCounter = (counterId) => {
-        dispatch(incrementCounter(counterId));
-    }
+    const dispatchGetCounters = useCallback(() => dispatch(getCounters), [dispatch]);
 
-    const dispatchDecrementCounter = (counterId) => {
-        dispatch(decrementCounter(counterId));
-    }
+    const dispatchSetNullSelectedCounter = useCallback(() => dispatch(setSelectedCounter(null)), [dispatch]);
 
-    const dispatchRefreshCounters = () => {
-        dispatch(refreshCounters());
-    }
+    const dispatchSetSelectedCounter = useCallback((counterId) => dispatch(setSelectedCounter(counterId)), [dispatch]);
+
+    const dispatchIncrementCounter = useCallback((counterId) => dispatch(incrementCounter(counterId)), [dispatch]);
+
+    const dispatchDecrementCounter = useCallback((counterId) => dispatch(decrementCounter(counterId)), [dispatch]);
+
+    const dispatchRefreshCounters = useCallback(() => dispatch(refreshCounters), [dispatch]);
 
     if (loading) {
         return <Loading/>
@@ -50,13 +45,17 @@ const CounterList = () => {
     } else if (counters.length === 0) {
         return <EmptyList/>
     } else {
-        return <FullList counters={filteredCounters} selectedCounter={selectedCounter}
-                         disabled={searchFilterEmpty} refreshing={refreshing}
-                         handleClickOutsideList={() => dispatchSetSelectedCounter(null)}
-                         handleClickOnListItem={(itemId) => dispatchSetSelectedCounter(itemId)}
-                         handleClickIncItem={(counterId) => dispatchIncrementCounter(counterId)}
-                         handleClickDecItem={(counterId) => dispatchDecrementCounter(counterId)}
-                         handleClickRefresh={dispatchRefreshCounters}/>
+        return (
+            <FullList counters={filteredCounters}
+                      selectedCounter={selectedCounter}
+                      disabled={searchFilterEmpty}
+                      refreshing={refreshing}
+                      handleClickOutsideList={dispatchSetNullSelectedCounter}
+                      handleClickOnListItem={dispatchSetSelectedCounter}
+                      handleClickIncItem={dispatchIncrementCounter}
+                      handleClickDecItem={dispatchDecrementCounter}
+                      handleClickRefresh={dispatchRefreshCounters}
+            />)
     }
 };
 
