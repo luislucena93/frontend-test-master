@@ -4,6 +4,37 @@
 
 > Create a new git repository on the root of this folder, upload it to Github, and invite [@mcarafie](https://github.com/mcarafie) and [@cornershop-hr](https://github.com/cornershop-hr) as collaborators.
 
+##Decision making summary
+
+- I decided to use Redux combined with hooks to handle the data flow for the app.
+- Also decided to use react router to navigate between welcome and mainScreen, because I wanted that if the userhit refresh it still remains in the current page.
+- Then I coded welcome screen with a link button to navigate to mainScreen.
+- In main screen i divided the work in main components -> SearchBar, CountersList, Footers and Modals.
+- I started by adding the SearchBar component which handle the text change to filter the counter list. The main challenge in this component was managing the states of the UI to fulfill the requirements.
+- Then I workerd in the countersList component. This one get the necesary values from the store and render the particular UI component for the actual state. For this I've created 4 UI components, one for each posible state -> Loading, ErrorScreen, EmptyList and FullList.
+    - For Loading I wanted to give a little fade in out animation for giving visual feedback to the user.
+    - The errorScreen and the emptyList components are mostly UI.
+    - The fullList component was the most challenging. I divided this UI in two. The summary and the actual list
+        - The summary show totals for quantity of counters and counts and shows the refreshing state and button.
+        - The itemsList consist in a list of Item component and each one of them handles the increment, decrement and selection of a particular counter.
+        - For this component I added a eventListener for click in the window, with the goal of detecting when the user click outside of the list to clear the selection, for this i've used a helping class 'clickable' in all the components that could be clicked without clearing the selectio, such is the case for some modals and buttons in the footer.
+        - Also had to create an disableOverlay that prevented clicks whe the list is disabled by the search filter with an empty text. In this case clicking in one of the list items would cancel the search and then enable clicks on the list.
+- Next I added the footer component, this one renders the share and delete buttons if a particular counter is selected, and always render the add button.
+    - For this had to add the share tooltip component, wich shows over the share button. Here had to put a hidden textArea to be able to copy text to the clipboard.
+    - Also added a disableOverlay to prevent clicks when footer is disabled.
+- Then I worked on the modals, starting with the add new counter. For this and the examples names modal i've used a library called react-modal-sheet, that allows to create bottom sheet animated modals fully customizable. 
+    - For Addind a new counter I decided to store the new counter name in the store, to be able to modify this from the examples modal. And also disable the save button if empty.
+    - The examples modal just is a display for fixed categories and suggestions of names, and when the user clicks on one of them the modal closes and set the new counter name to the store.
+    - For the delete confirmation modal and the error modals I decided not to use any library and made them from scratch. 
+    - The error modals was the last functionality implementation. For this I wanted to make a dynamic component that get the tipe of error from the store and changes the messages and the action buttons in return.
+- In each of these steps I added the corresponding actions and reducers to handle the data store.
+- Once I finished developing the app functionality I did a little refactoring, mooving some action dispatch to make more purely presentation components.
+- Al last I added unit behaviour testing for each of the presentation components and connected components as well.
+
+- Overall the main challenges I've faced were using redux with hooks, this was new to me but i wanted to apply this for making more concise components, and also testing this hooked components was a little tricky. 
+    
+        
+
 ## Overview
 
 You have been commissioned to implement a counter application following the design specs provided [here](https://www.figma.com/file/6CnuM0Gj9oiwi2AV9vXLRH/Counters-for-the-web?node-id=0%3A1).
