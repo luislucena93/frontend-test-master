@@ -174,7 +174,6 @@ export function deleteCounter(counterId) {
             response.json()
                 .then((counterId) => {
                     dispatch(setOpenDeleteConfirmationModal(false));
-                    console.log(counterId);
                     setTimeout(() => {//Espera a que se cierre la modal para no mostrar titulo vacío
                         dispatch(removeCounter(counterId));
                         dispatch(setSelectedCounter(null));
