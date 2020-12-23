@@ -4,7 +4,7 @@
 
 > Create a new git repository on the root of this folder, upload it to Github, and invite [@mcarafie](https://github.com/mcarafie) and [@cornershop-hr](https://github.com/cornershop-hr) as collaborators.
 
-##Decision making summary
+## Decision making summary
 
 - I decided to use Redux combined with hooks to handle the data flow for the app.
 - Also decided to use react router to navigate between welcome and mainScreen, because I wanted that if the userhit refresh it still remains in the current page.
