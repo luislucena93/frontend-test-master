@@ -20,10 +20,7 @@ const FullList = (props) => {
         const detectClickOutside = (e) => {
             let clickOutside = true;
             const clickablesElements = document.getElementsByClassName('clickable');
-            console.log(e.target);
             [].forEach.call(clickablesElements, (clickableElement) => {
-                console.log(clickableElement);
-                console.log(clickableElement.contains(e.target));
                 if (clickableElement.contains(e.target)) {
                     clickOutside = false;
                 }

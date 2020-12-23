@@ -36,7 +36,7 @@ const CounterList = () => {
 
     const dispatchDecrementCounter = useCallback((counterId) => dispatch(decrementCounter(counterId)), [dispatch]);
 
-    const dispatchRefreshCounters = useCallback(() => dispatch(refreshCounters), [dispatch]);
+    const dispatchRefreshCounters = useCallback(() => dispatch(refreshCounters()), [dispatch]);
 
     if (loading) {
         return <Loading/>

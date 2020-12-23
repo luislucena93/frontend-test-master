@@ -64,7 +64,10 @@ export const updateCounter = (counter) => ({type: UPDATE_COUNTER, counter});
 
 export const addNewCounter = (counter) => ({type: ADD_COUNTER, counter});
 
-export const removeCounter = (counterId) => ({type: REMOVE_COUNTER, counterId});
+export const removeCounter = (counterId) => {
+    console.log(counterId);
+    return ({type: REMOVE_COUNTER, counterId})
+};
 
 
 //THUNK ASYNC ACTIONS
@@ -159,7 +162,7 @@ export function addCounter(counterName) {
     }
 };
 
-export const deleteCounter = (counterId) => {
+export function deleteCounter(counterId) {
     return function deleteCounterAction(dispatch) {
         dispatch(clearConnectionError());
         dispatch(setOpenErrorModal(false));
@@ -169,10 +172,11 @@ export const deleteCounter = (counterId) => {
             body: JSON.stringify({id: counterId})
         }).then((response) => {
             response.json()
-                .then((counter) => {
+                .then((counterId) => {
                     dispatch(setOpenDeleteConfirmationModal(false));
-                    setTimeout(() => { //Espera a que se cierre la modal para no mostrar titulo vacío
-                        dispatch(removeCounter(counter.id));
+                    console.log(counterId);
+                    setTimeout(() => {//Espera a que se cierre la modal para no mostrar titulo vacío
+                        dispatch(removeCounter(counterId));
                         dispatch(setSelectedCounter(null));
                     }, 200);
                 })

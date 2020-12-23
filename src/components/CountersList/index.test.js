@@ -133,7 +133,7 @@ describe('Counters list component', () => {
         });
         renderWithState(<CountersList/>, mockStore);
         fireEvent.click(screen.getByAltText('refresh'));
-        expect(mockStore.dispatch).toHaveBeenCalledWith(refreshCounters);
+        expect(mockStore.dispatch).toHaveBeenCalledWith(expect.objectContaining({name: 'refreshCountersAction'}));
     });
 
 })

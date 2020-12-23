@@ -1,5 +1,7 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk'
+import fetchMock from 'jest-fetch-mock';
+
 import {
     ADD_COUNTER, addCounter, addNewCounter,
     CLEAR_CONNECTION_ERROR, clearConnectionError, decrementCounter, deleteCounter, ERROR_ADD_COUNTER, ERROR_DEC_COUNTER,
@@ -182,6 +184,14 @@ describe('actions', () => {
 
 describe('async actions', () => {
 
+    beforeEach(() => {
+        fetchMock.enableMocks();
+    });
+
+    afterAll(() => {
+        fetchMock.disableMocks();
+    });
+
     it('dispatch expected actions when getting counters from api', () => {
         const counters = [{id: '123', title: 'test counter', count: 0}];
         fetchMock.mockOnce(JSON.stringify(counters));
@@ -334,14 +344,14 @@ describe('async actions', () => {
     })
 
     it('dispatch expected actions when calling delete counter from api', () => {
-        const counter = {id: '123', title: 'test counter', count: 0};
-        fetchMock.mockOnce(JSON.stringify(counter));
+        const counterId = '123';
+        fetchMock.mockOnce(JSON.stringify(counterId));
         jest.useFakeTimers()
         const expectedActions = [
             {type: CLEAR_CONNECTION_ERROR},
             {type: SET_OPEN_ERROR_MODAL, open: false},
             {type: SET_OPEN_DELETE_CONFIRMATION_MODAL, open: false},
-            {type: REMOVE_COUNTER, counterId: counter.id},
+            {type: REMOVE_COUNTER, counterId: counterId},
             {type: SET_SELECTED_COUNTER, counterId: null},
         ]
         const store = mockStore();
