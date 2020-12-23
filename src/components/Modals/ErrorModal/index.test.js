@@ -71,6 +71,7 @@ describe('Error modal component', () => {
 
     it('should dispatch delete counter when click in retry button and set open error modal when click dismiss button if' +
         ' connection error is ERROR_DEL_COUNTER', () => {
+        jest.useFakeTimers();
         const mockStore = getMockStore({
             openErrorModal: true,
             connectionError: ERROR_DEL_COUNTER,
@@ -79,13 +80,17 @@ describe('Error modal component', () => {
         });
         renderWithState(<ErrorModal/>, mockStore);
         fireEvent.click(screen.getByText('Retry'));
+        jest.runAllTimers();
         expect(mockStore.dispatch).toHaveBeenCalledWith(expect.objectContaining({name: 'deleteCounterAction'}));
         fireEvent.click(screen.getByText('Dismiss'));
+        jest.runAllTimers();
         expect(mockStore.dispatch).toHaveBeenCalledWith(setOpenErrorModal(false));
+        jest.useRealTimers();
     });
 
     it('should dispatch increment counter when click in retry button and set open error modal when click dismiss button if' +
         ' connection error is ERROR_INC_COUNTER', () => {
+        jest.useFakeTimers();
         const mockStore = getMockStore({
             openErrorModal: true,
             connectionError: ERROR_INC_COUNTER,
@@ -94,13 +99,17 @@ describe('Error modal component', () => {
         });
         renderWithState(<ErrorModal/>, mockStore);
         fireEvent.click(screen.getByText('Retry'));
+        jest.runAllTimers();
         expect(mockStore.dispatch).toHaveBeenCalledWith(expect.objectContaining({name: 'incrementCounterAction'}));
         fireEvent.click(screen.getByText('Dismiss'));
+        jest.runAllTimers();
         expect(mockStore.dispatch).toHaveBeenCalledWith(setOpenErrorModal(false));
+        jest.useRealTimers()
     });
 
     it('should dispatch decrement counter when click in retry button and set open error modal when click dismiss button if' +
         ' connection error is ERROR_DEC_COUNTER', () => {
+        jest.useFakeTimers()
         const mockStore = getMockStore({
             openErrorModal: true,
             connectionError: ERROR_DEC_COUNTER,
@@ -109,12 +118,16 @@ describe('Error modal component', () => {
         });
         renderWithState(<ErrorModal/>, mockStore);
         fireEvent.click(screen.getByText('Retry'));
+        jest.runAllTimers();
         expect(mockStore.dispatch).toHaveBeenCalledWith(expect.objectContaining({name: 'decrementCounterAction'}));
         fireEvent.click(screen.getByText('Dismiss'));
+        jest.runAllTimers();
         expect(mockStore.dispatch).toHaveBeenCalledWith(setOpenErrorModal(false));
+        jest.useRealTimers();
     });
 
     it('should set open error modal when click dismiss button if connection error is ERROR_ADD_COUNTER', () => {
+        jest.useFakeTimers()
         const mockStore = getMockStore({
             openErrorModal: true,
             connectionError: ERROR_ADD_COUNTER,
@@ -123,7 +136,9 @@ describe('Error modal component', () => {
         });
         renderWithState(<ErrorModal/>, mockStore);
         fireEvent.click(screen.getByText('Dismiss'));
+        jest.runAllTimers()
         expect(mockStore.dispatch).toHaveBeenCalledWith(setOpenErrorModal(false));
+        jest.useRealTimers()
     })
 
 })

@@ -20,7 +20,7 @@ const ErrorModal = () => {
 
     const dispatchIncrementCounter = useCallback((counterId) => dispatch(incrementCounter(counterId)), [dispatch]);
 
-    const dispatchCloseErrorModal = useCallback(() => dispatch(setOpenErrorModal(false)), [dispatch]);
+    const dispatchCloseErrorModal = useCallback(() => setTimeout(() => dispatch(setOpenErrorModal(false)), 1), [dispatch]);
 
     const getTitle = () => {
         switch (connectionError) {
@@ -55,7 +55,8 @@ const ErrorModal = () => {
         return (
             <div className={"modalButtons"}>
                 {connectionError !== ERROR_ADD_COUNTER &&
-                <button className={"mainButton"} onClick={() => retryButtonAction(counter.id)}>Retry</button>
+                <button className={"mainButton"} onClick={() => setTimeout(() => retryButtonAction(counter.id), 1)}>
+                    Retry</button>
                 }
                 <button className={connectionError !== ERROR_ADD_COUNTER ? "secondaryButton" : "mainButton"}
                         onClick={dispatchCloseErrorModal}>
@@ -76,7 +77,7 @@ const ErrorModal = () => {
     }
     return (
         <div className={`overlay clickable ${open ? 'show' : ''}`}>
-            <div className={"modalWindow"}>
+            <div className={"modalWindow clickable"}>
                 <ModalContent/>
             </div>
         </div>

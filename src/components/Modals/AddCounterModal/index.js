@@ -18,7 +18,7 @@ const AddCounterModal = () => {
             dispatch(setOpenAddCounterModal(false));
             dispatch(setNewCounterName(""));
         }
-    }, [dispatch]);
+    }, [dispatch, loading]);
 
     const dispatchAddCounter = useCallback((newName) => dispatch(addCounter(newName)), [dispatch]);
 
