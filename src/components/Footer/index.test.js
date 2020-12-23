@@ -6,7 +6,7 @@ import {setOpenAddCounterModal, setOpenDeleteConfirmationModal, setShowTooltip} 
 
 describe('Footer component', () => {
 
-    it('should render idle footer if loading for initial state', () => {
+    it('should render idle footer for initial state', () => {
         const {container} = renderWithState(<Footer/>, getMockStore({}));
         expect(container.firstChild).toHaveClass('footer');
         expect(container.firstChild).not.toHaveClass('disabled');

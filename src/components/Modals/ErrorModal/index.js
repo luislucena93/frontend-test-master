@@ -65,7 +65,7 @@ const ErrorModal = () => {
         )
     }
 
-    const modalContent = () => {
+    const ModalContent = () => {
         return (
             <div className={"modalContentContainer"}>
                 <p className={"modalTitle"}>{getTitle()}</p>
@@ -77,7 +77,7 @@ const ErrorModal = () => {
     return (
         <div className={`overlay clickable ${open ? 'show' : ''}`}>
             <div className={"modalWindow"}>
-                {modalContent()}
+                <ModalContent/>
             </div>
         </div>
     )

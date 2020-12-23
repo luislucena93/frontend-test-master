@@ -72,7 +72,7 @@ export function getCounters() {
     return function getCountersAction(dispatch) {
         dispatch(setLoading(true));
         dispatch(clearConnectionError());
-        fetch('/api/v1/counter', {method: 'get'})
+        return fetch('/api/v1/counter', {method: 'get'})
             .then((response) => {
                 response.json()
                     .then((counters) => {
@@ -92,7 +92,7 @@ export function incrementCounter(counterId) {
         dispatch(clearConnectionError());
         dispatch(setOpenErrorModal(false));
         dispatch(setRefreshing(true));
-        fetch('/api/v1/counter/inc', {
+        return fetch('/api/v1/counter/inc', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({id: counterId})
@@ -115,7 +115,7 @@ export function decrementCounter(counterId) {
         dispatch(clearConnectionError());
         dispatch(setOpenErrorModal(false));
         dispatch(setRefreshing(true));
-        fetch('/api/v1/counter/dec', {
+        return fetch('/api/v1/counter/dec', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({id: counterId})
@@ -139,22 +139,22 @@ export function addCounter(counterName) {
         dispatch(clearConnectionError());
         dispatch(setOpenErrorModal(false));
         dispatch(setLoading(true));
-        fetch('/api/v1/counter', {
+        return fetch('/api/v1/counter', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({title: counterName})
         }).then((response) => {
             response.json()
                 .then((counter) => {
-                    dispatch(setLoading(false));
                     dispatch(addNewCounter(counter));
                     dispatch(setOpenAddCounterModal(false));
                     dispatch(setNewCounterName(''))
+                    dispatch(setLoading(false));
                 })
         }).catch(() => {
             dispatch(setConnectionError(ERROR_ADD_COUNTER));
-            dispatch(setLoading(false));
             dispatch(setOpenErrorModal(true));
+            dispatch(setLoading(false));
         })
     }
 };
@@ -163,7 +163,7 @@ export const deleteCounter = (counterId) => {
     return function deleteCounterAction(dispatch) {
         dispatch(clearConnectionError());
         dispatch(setOpenErrorModal(false));
-        fetch('/api/v1/counter', {
+        return fetch('/api/v1/counter', {
             method: 'delete',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({id: counterId})
@@ -172,7 +172,7 @@ export const deleteCounter = (counterId) => {
                 .then((counter) => {
                     dispatch(setOpenDeleteConfirmationModal(false));
                     setTimeout(() => { //Espera a que se cierre la modal para no mostrar titulo vacío
-                        dispatch(removeCounter(counterId));
+                        dispatch(removeCounter(counter.id));
                         dispatch(setSelectedCounter(null));
                     }, 200);
                 })
@@ -187,7 +187,7 @@ export function refreshCounters() {
     return function refreshCountersAction(dispatch) {
         dispatch(clearConnectionError());
         dispatch(setRefreshing(true));
-        fetch('/api/v1/counter', {method: 'get'})
+        return fetch('/api/v1/counter', {method: 'get'})
             .then((response) => {
                 response.json()
                     .then((counters) => {
@@ -195,6 +195,9 @@ export function refreshCounters() {
                         dispatch(setRefreshing(false))
                     })
             })
-            .catch((err) => dispatch(setConnectionError(ERROR_GET_COUNTERS)))
+            .catch((err) => {
+                dispatch(setConnectionError(ERROR_GET_COUNTERS));
+                dispatch(setRefreshing(false));
+            })
     }
 };
